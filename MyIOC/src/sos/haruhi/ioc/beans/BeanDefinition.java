@@ -1,14 +1,17 @@
 package sos.haruhi.ioc.beans;
 
+import java.util.List;
+
 public class BeanDefinition {
     private String id;
 
     private String name;
 
+    private String ref;
     private String alias;
     private String beanClass;
     private String scope;
-    private Property properties;
+    private List<Property> properties;
 
     public String getRef() {
         return ref;
@@ -57,11 +60,11 @@ public class BeanDefinition {
         this.beanClass = beanClass;
     }
 
-    public Property getProperties() {
+    public List<Property> getProperties() {
         return properties;
     }
 
-    public void setProperties(Property properties) {
+    public void setProperties(List<Property> properties) {
         this.properties = properties;
     }
 }

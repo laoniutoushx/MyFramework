@@ -4,57 +4,71 @@ import org.dom4j.*;
 import org.dom4j.io.SAXReader;
 import sos.haruhi.ioc.beans.BeanDefinition;
 import sos.haruhi.ioc.beans.Property;
+import sos.haruhi.util.ReflectUtil;
 
 import java.io.File;
-import java.lang.reflect.Proxy;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
 public class XMLReaderFactory {
-    private SAXReader reader = new SAXReader();
+    private SAXReader reader = null;
     private Document document = null;
 
-    public Document getDocument(String path){
+    public Element getRootElement(String path){
         try {
-            document = reader.read(new File((path)));
+            reader = new SAXReader();
+            File file = new File("S:\\MyFramework\\MyIOC\\src\\sos\\nagato\\test\\mySpringConfig.xml");
+            document = reader.read(file);
         } catch (DocumentException e) {
             try {
+                System.out.println(e.getMessage());
                 document = reader.read(XMLReaderFactory.class.getResourceAsStream(path));
             } catch (DocumentException e1) {
-                e1.printStackTrace();
+                throw new RuntimeException("document is null");
             }
         }
-        return document;
+        return document.getRootElement();
     }
 
-    public Element parseDocument(Document document){
-        List<Node> nodes = document.selectNodes("/bean");
-        List<BeanDefinition> beans = new ArrayList<BeanDefinition>();
-        for(Node node:nodes){
-            String id = node.valueOf("id");
-            String className = node.valueOf("class");
-            BeanDefinition bean = new BeanDefinition();
-            bean.setId(id);
-            bean.setBeanClass(className);
-            this.parseBeanProperty(node);
-            beans.add(bean);
+    public List<BeanDefinition> parseBeanElement(Element root, String targetName) {
+        List<Element> beans = (List<Element>) root.selectNodes(targetName);
+        List<BeanDefinition> list = new ArrayList<BeanDefinition>();
+        for (Element bean : beans) {
+            List<Attribute> attributes = bean.attributes();
+            BeanDefinition beanDefinition = new BeanDefinition();
+            for (Attribute attribute : attributes) {
+                System.out.println(attribute.getName() + ":" + attribute.getValue());
+                ReflectUtil.invokeMethod(beanDefinition, "set" + attribute.getName().substring(0, 1).toUpperCase() + attribute.getName().substring(1), attribute.getValue());
+            }
+            beanDefinition.setProperties(parseBeanProperty(bean, "property"));
+            list.add(beanDefinition);
         }
-        return null;
+        return list;
     }
 
-    public List<Property> parseBeanProperty(Element node){
-        List<Property> list = new ArrayList<>();
-        Iterator it = node.attributeIterator();
-        while(it.hasNext()){
-            Attribute attr = (Attribute) it.next();
-            attr.get
+    public List<Property> parseBeanProperty(Element element, String targetName){
+        List<Element> beans = element.selectNodes(targetName);
+        List<Property> list = new ArrayList<Property>();
+        for (Element bean : beans) {
+            List<Attribute> attributes = bean.attributes();
+            Property property = new Property();
+            for (Attribute attribute : attributes) {
+                System.out.println(attribute.getName() + ":" + attribute.getValue());
+                ReflectUtil.invokeMethod(property, "set" + attribute.getName().substring(0, 1).toUpperCase() + attribute.getName().substring(1), attribute.getValue());
+            }
+            list.add(property);
         }
-        for(Iterator it:node.attributeIterator())
+        return list;
     }
 
-    public
+    public static void main(String[] args) {
+        XMLReaderFactory xmlReaderFactory = new XMLReaderFactory();
+        Element root = xmlReaderFactory.getRootElement(null);
+        List<BeanDefinition> beans = xmlReaderFactory.parseBeanElement(root, "bean");
+        BeanFactory beanFactory = new BeanFactory() {};
+        beanFactory.registerBean(beans);
 
-
+    }
 
 }

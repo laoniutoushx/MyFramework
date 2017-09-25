@@ -2,12 +2,30 @@ package sos.haruhi.ioc.beans;
 
 public class Property {
     private String name;
-    private Object value;
+    private String value;
     private String ref;
 
-    public Property(String name, Object value, String ref) {
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
         this.name = name;
+    }
+
+    public String getValue() {
+        return value;
+    }
+
+    public void setValue(String value) {
         this.value = value;
+    }
+
+    public String getRef() {
+        return ref;
+    }
+
+    public void setRef(String ref) {
         this.ref = ref;
     }
 }
