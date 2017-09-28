@@ -18,7 +18,8 @@ public class XMLReaderFactory {
     public Element getRootElement(String path){
         try {
             reader = new SAXReader();
-            File file = new File("S:\\MyFramework\\MyIOC\\src\\sos\\nagato\\test\\mySpringConfig.xml");
+            System.out.println(System.getProperty("user.dir") + "\\MyIOC\\src\\sos\\nagato\\test\\mySpringConfig.xml");
+            File file = new File(System.getProperty("user.dir") + "\\MyIOC\\src\\sos\\nagato\\test\\mySpringConfig.xml");
             document = reader.read(file);
         } catch (DocumentException e) {
             try {
