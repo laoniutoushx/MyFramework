@@ -1,4 +1,4 @@
-package sos.haruhi.ioc.factory;
+package sos.haruhi.ioc.prototype;
 
 public interface IBeanFactory {
     Object getBean(String name);

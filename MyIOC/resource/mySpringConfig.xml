@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <beans>
-    <bean id="hello" class="sox.nagato.test.ZZZ">
-        <property name="people" ref="sox.nagato.test.XXX"/>
+    <bean id="hello" class="sos.nagato.test.ZZZ">
+        <property name="people" ref="sos.nagato.test.XXX"/>
         <property name="name" value="haruhi" />
     </bean>
 </beans>

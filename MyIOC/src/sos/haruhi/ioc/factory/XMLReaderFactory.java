@@ -11,20 +11,27 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class XMLReaderFactory {
+public abstract class XMLReaderFactory {
     private SAXReader reader = null;
     private Document document = null;
+    private List<BeanDefinition> beans;
 
-    public Element getRootElement(String path){
+    public XMLReaderFactory(String configPath){
+        Element root = this.getRootElement(configPath);
+        List<BeanDefinition> beans = this.parseBeanElement(root, "bean");
+        this.beans = beans;
+    }
+
+    public Element getRootElement(String configPath){
         try {
             reader = new SAXReader();
-            System.out.println(System.getProperty("user.dir") + "\\MyIOC\\src\\sos\\nagato\\test\\mySpringConfig.xml");
-            File file = new File(System.getProperty("user.dir") + "\\MyIOC\\src\\sos\\nagato\\test\\mySpringConfig.xml");
+            System.out.println(configPath);
+            File file = new File(configPath);
             document = reader.read(file);
         } catch (DocumentException e) {
             try {
                 System.out.println(e.getMessage());
-                document = reader.read(XMLReaderFactory.class.getResourceAsStream(path));
+                document = reader.read(XMLReaderFactory.class.getResourceAsStream(configPath));
             } catch (DocumentException e1) {
                 throw new RuntimeException("document is null");
             }
@@ -63,13 +70,8 @@ public class XMLReaderFactory {
         return list;
     }
 
-    public static void main(String[] args) {
-        XMLReaderFactory xmlReaderFactory = new XMLReaderFactory();
-        Element root = xmlReaderFactory.getRootElement(null);
-        List<BeanDefinition> beans = xmlReaderFactory.parseBeanElement(root, "bean");
-        BeanFactory beanFactory = new BeanFactory() {};
-        beanFactory.registerBean(beans);
-
+    public List<BeanDefinition> getBeans(){
+        return this.beans;
     }
 
 }
