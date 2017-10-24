@@ -82,13 +82,21 @@ public class BeanFactory implements IBeanFactory {
             String ref = property.getRef();
             if(StringUtils.isNotBlank(ref)){
 
-                Object obj = this.getBean(name);
+                Object obj = this.getBean(ref);
+
+                Method method = null;
                 try {
-                    Method method = clz.getMethod("set" + StringUtils.upperCaseFirst(name), Class.forName(ref));
+                    method = clz.getMethod("set" + StringUtils.upperCaseFirst(name), obj.getClass());
                     method.invoke(result, obj);
-                } catch (NoSuchMethodException | InvocationTargetException | IllegalAccessException | ClassNotFoundException e) {
+                } catch (NoSuchMethodException e) {
+                    e.printStackTrace();
+                } catch (InvocationTargetException e) {
+                    e.printStackTrace();
+                } catch (IllegalAccessException e) {
                     e.printStackTrace();
                 }
+
+
             }else{
                 try {
                     Method method = clz.getMethod("set" + StringUtils.upperCaseFirst(name), String.class);

@@ -2,7 +2,10 @@
 
 <beans>
     <bean id="hello" class="sos.nagato.test.ZZZ">
-        <property name="people" ref="sos.nagato.test.XXX"/>
+        <property name="people" ref="world"/>
         <property name="name" value="haruhi" />
+    </bean>
+    <bean id="world" class="sos.nagato.test.XXX">
+        <property name="name" value="nagato" />
     </bean>
 </beans>
