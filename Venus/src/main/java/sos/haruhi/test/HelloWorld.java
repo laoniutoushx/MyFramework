@@ -1,6 +1,5 @@
 package sos.haruhi.test;
 
-
 public class HelloWorld {
 
     private String name;
