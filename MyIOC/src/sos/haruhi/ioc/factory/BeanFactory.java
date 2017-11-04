@@ -88,11 +88,7 @@ public class BeanFactory implements IBeanFactory {
                 try {
                     method = clz.getMethod("set" + StringUtils.upperCaseFirst(name), obj.getClass());
                     method.invoke(result, obj);
-                } catch (NoSuchMethodException e) {
-                    e.printStackTrace();
-                } catch (InvocationTargetException e) {
-                    e.printStackTrace();
-                } catch (IllegalAccessException e) {
+                } catch (NoSuchMethodException | InvocationTargetException | IllegalAccessException e) {
                     e.printStackTrace();
                 }
 

@@ -46,7 +46,7 @@ public abstract class XMLReaderFactory {
             List<Attribute> attributes = bean.attributes();
             BeanDefinition beanDefinition = new BeanDefinition();
             for (Attribute attribute : attributes) {
-                System.out.println(attribute.getName() + ":" + attribute.getValue());
+                //System.out.println(attribute.getName() + ":" + attribute.getValue());
                 ReflectUtil.invokeMethod(beanDefinition, "set" + attribute.getName().substring(0, 1).toUpperCase() + attribute.getName().substring(1), attribute.getValue());
             }
             beanDefinition.setProperties(parseBeanProperty(bean, "property"));
@@ -62,7 +62,7 @@ public abstract class XMLReaderFactory {
             List<Attribute> attributes = bean.attributes();
             Property property = new Property();
             for (Attribute attribute : attributes) {
-                System.out.println(attribute.getName() + ":" + attribute.getValue());
+                //System.out.println(attribute.getName() + ":" + attribute.getValue());
                 ReflectUtil.invokeMethod(property, "set" + attribute.getName().substring(0, 1).toUpperCase() + attribute.getName().substring(1), attribute.getValue());
             }
             list.add(property);

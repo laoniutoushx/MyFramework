@@ -7,6 +7,8 @@ public class BeginAgain {
     public static void main(String[] args) {
         BeanFactory beanFactory = new ClassPathXmlApplicationContext("spring-context.xml");
         HelloWorld helloWorld = (HelloWorld) beanFactory.getBean("hello");
+        HelloAnnotation helloAnnotation = (HelloAnnotation) beanFactory.getBean("anno");
         System.out.println(helloWorld.getName());
+        System.out.println(helloAnnotation.getHelloWorld().getName());
     }
 }
