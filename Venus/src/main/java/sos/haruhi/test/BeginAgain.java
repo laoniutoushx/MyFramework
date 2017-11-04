@@ -10,5 +10,6 @@ public class BeginAgain {
         HelloAnnotation helloAnnotation = (HelloAnnotation) beanFactory.getBean("anno");
         System.out.println(helloWorld.getName());
         System.out.println(helloAnnotation.getHelloWorld().getName());
+        System.out.println("tttt");
     }
 }
