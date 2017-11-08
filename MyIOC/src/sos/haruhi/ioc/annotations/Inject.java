@@ -5,5 +5,5 @@ package sos.haruhi.ioc.annotations;
  * Created by SuzumiyaHaruhi on 2017/10/29.
  */
 public @interface Inject {
-
+    
 }
