@@ -11,5 +11,6 @@ public class BeginAgain {
         System.out.println(helloWorld.getName());
         System.out.println(helloAnnotation.getHelloWorld().getName());
         System.out.println("tttt");
+        helloAnnotation.scanTest();
     }
 }
