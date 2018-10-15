@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<beans>
+
+    <bean id="xxx" class="sos.nagato.test.XXX">
+        <property name="id" value="2" />
+        <property name="name" value="老牛" />
+    </bean>
+
+    <bean id="zzz" class="sos.nagato.test.ZZZ">
+        <property name="id" value="1" />
+        <property name="people" ref="xxx" />
+        <property name="name" value="老朱" />
+    </bean>
+
+</beans>

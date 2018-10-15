@@ -3,8 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Code.iml" filepath="$PROJECT_DIR$/Code.iml" />
-      <module fileurl="file://$PROJECT_DIR$/MyIOC/MyIOC.iml" filepath="$PROJECT_DIR$/MyIOC/MyIOC.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Venus/Venus.iml" filepath="$PROJECT_DIR$/Venus/Venus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TestFramework/TestFramework.iml" filepath="$PROJECT_DIR$/TestFramework/TestFramework.iml" />
     </modules>
   </component>
 </project>
