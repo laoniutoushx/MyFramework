@@ -1,6 +1,7 @@
 package sos.haruhi.util;
 
 import org.apache.commons.beanutils.BeanUtils;
+import org.apache.commons.lang3.StringUtils;
 import sos.haruhi.ioc.beans.Property;
 
 import java.lang.reflect.InvocationTargetException;
@@ -16,8 +17,10 @@ import java.lang.reflect.Method;
 public class MyReflectUtils {
     public static void invokeMethod(Object target, String methodName, String value){
         try {
-            Method method = target.getClass().getMethod(methodName);
-            System.out.println(target.getClass().getMethods());
+            if(StringUtils.equals(methodName, "setClass")){
+                methodName = "setBeanClass";
+            }
+            Method method = target.getClass().getMethod(methodName, String.class);
             if(method != null){
                 method.invoke(target, value);
             }

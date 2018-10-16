@@ -6,6 +6,10 @@ package sos.nagato.test;
 public class XXX {
     private int id;
 
+    private String name;
+
+    private ZZZ student;
+
     public int getId() {
         return id;
     }
@@ -14,7 +18,13 @@ public class XXX {
         this.id = id;
     }
 
-    private String name;
+    public ZZZ getStudent() {
+        return student;
+    }
+
+    public void setStudent(ZZZ student) {
+        this.student = student;
+    }
 
     public String getName() {
         return name;

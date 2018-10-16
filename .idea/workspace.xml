@@ -6,81 +6,24 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bceaee0-fcb6-4153-9a52-8ac53121946f" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_9_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jaxen_jaxen_1_1_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestFramework/TestFramework.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestFramework/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/util/MyReflectUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/util/MyStringUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestFramework/src/main/resources/sos-spring-core.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Venus_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Venus_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_3_8_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_0_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_0_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_0_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_0_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_0_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/MyIOCJar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="5bceaee0-fcb6-4153-9a52-8ac53121946f" name="Default" comment="MySpring">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestFramework/src/main/resources/sos-spring-schem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestFramework/src/test/java/sos/haruhi/reflect/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestFramework/src/test/java/sos/haruhi/reflect/ReflectTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyIOC/MyIOC.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyIOC/lib/dom4j-1.6.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyIOC/lib/jaxen-1.1.6.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyIOC/resource/mySpringConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyIOC/resource/spring-config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyIOC/src/sos/haruhi/ioc/annotations/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/ioc/annotations/Component.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyIOC/src/sos/haruhi/ioc/annotations/Inject.java" beforeDir="false" afterPath="$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/ioc/annotations/Inject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyIOC/src/sos/haruhi/ioc/beans/BeanDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/ioc/beans/BeanDefinition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyIOC/src/sos/haruhi/ioc/beans/Property.java" beforeDir="false" afterPath="$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/ioc/beans/Property.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyIOC/src/sos/haruhi/ioc/factory/BeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/ioc/factory/BeanFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyIOC/src/sos/haruhi/ioc/factory/HaruhiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/ioc/factory/HaruhiApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyIOC/src/sos/haruhi/ioc/factory/XMLReaderFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/ioc/factory/XMLReaderFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyIOC/src/sos/haruhi/ioc/prototype/IBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/ioc/prototype/IBeanFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyIOC/src/sos/haruhi/util/ReflectUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyIOC/src/sos/haruhi/util/StringUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyIOC/src/sos/nagato/test/AHaruhi.java" beforeDir="false" afterPath="$PROJECT_DIR$/TestFramework/src/main/java/sos/nagato/test/AHaruhi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyIOC/src/sos/nagato/test/ANagato.java" beforeDir="false" afterPath="$PROJECT_DIR$/TestFramework/src/main/java/sos/nagato/test/ANagato.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyIOC/src/sos/nagato/test/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/TestFramework/src/main/java/sos/nagato/test/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyIOC/src/sos/nagato/test/XXX.java" beforeDir="false" afterPath="$PROJECT_DIR$/TestFramework/src/main/java/sos/nagato/test/XXX.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyIOC/src/sos/nagato/test/ZZZ.java" beforeDir="false" afterPath="$PROJECT_DIR$/TestFramework/src/main/java/sos/nagato/test/ZZZ.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyIOC/target/classes/mySpringConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyIOC/target/classes/sos/haruhi/ioc/beans/BeanDefinition.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyIOC/target/classes/sos/haruhi/ioc/beans/Property.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyIOC/target/classes/sos/haruhi/ioc/factory/BeanFactory$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyIOC/target/classes/sos/haruhi/ioc/factory/BeanFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyIOC/target/classes/sos/haruhi/ioc/factory/HaruhiApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyIOC/target/classes/sos/haruhi/ioc/factory/XMLReaderFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyIOC/target/classes/sos/haruhi/ioc/prototype/IBeanFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyIOC/target/classes/sos/haruhi/util/ReflectUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyIOC/target/classes/sos/haruhi/util/StringUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyIOC/target/classes/sos/nagato/test/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyIOC/target/classes/sos/nagato/test/XXX.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyIOC/target/classes/sos/nagato/test/ZZZ.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyIOC/target/classes/spring-config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Venus/Venus.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Venus/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Venus/src/main/java/sos/haruhi/test/BeginAgain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Venus/src/main/java/sos/haruhi/test/HelloAnnotation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Venus/src/main/java/sos/haruhi/test/HelloWorld.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Venus/src/main/java/sos/haruhi/test/ScanTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Venus/src/main/resources/spring-context.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Venus/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Venus/src/main/webapp/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Venus/target/classes/sos/haruhi/test/BeginAgain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Venus/target/classes/sos/haruhi/test/HelloAnnotation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Venus/target/classes/sos/haruhi/test/HelloWorld.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Venus/target/classes/sos/haruhi/test/ScanTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Venus/target/classes/spring-context.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestFramework/TestFramework.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TestFramework/TestFramework.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestFramework/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/TestFramework/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/ioc/annotations/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/ioc/annotations/Component.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/ioc/annotations/Inject.java" beforeDir="false" afterPath="$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/ioc/annotations/Inject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/ioc/factory/BeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/ioc/factory/BeanFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/util/MyReflectUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/util/MyReflectUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestFramework/src/main/java/sos/nagato/test/AHaruhi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestFramework/src/main/java/sos/nagato/test/ANagato.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestFramework/src/main/java/sos/nagato/test/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/TestFramework/src/main/java/sos/nagato/test/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestFramework/src/main/java/sos/nagato/test/XXX.java" beforeDir="false" afterPath="$PROJECT_DIR$/TestFramework/src/main/java/sos/nagato/test/XXX.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestFramework/src/main/resources/sos-spring-core.xml" beforeDir="false" afterPath="$PROJECT_DIR$/TestFramework/src/main/resources/sos-spring-core.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/MyIOC/target/classes/" />
     <ignored path="$PROJECT_DIR$/MyIOC/target/test/" />
@@ -97,47 +40,51 @@
     <session id="-2047967386">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
+          <entry key="project.closed" value="9" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.25" value="1" />
           <entry key="project.open.time.26" value="1" />
+          <entry key="project.open.time.27" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.6" value="4" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="21" />
-          <entry key="java" value="69" />
+          <entry key="java" value="80" />
           <entry key="sos-spring-core" value="1" />
+          <entry key="sos-spring-schem" value="1" />
           <entry key="tld" value="1" />
-          <entry key="xml" value="14" />
+          <entry key="xml" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="21" />
-          <entry key="JAVA" value="69" />
-          <entry key="XML" value="16" />
+          <entry key="DTD" value="1" />
+          <entry key="JAVA" value="80" />
+          <entry key="XML" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="class" value="1" />
           <entry key="dummy" value="4" />
-          <entry key="java" value="1459" />
+          <entry key="java" value="1993" />
           <entry key="sos-spring-core" value="136" />
-          <entry key="xml" value="193" />
+          <entry key="txt" value="12" />
+          <entry key="xml" value="227" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="1459" />
-          <entry key="PLAIN_TEXT" value="4" />
-          <entry key="XML" value="329" />
+          <entry key="JAVA" value="1993" />
+          <entry key="PLAIN_TEXT" value="16" />
+          <entry key="XML" value="363" />
         </counts>
       </usages-collector>
     </session>
@@ -145,79 +92,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/ioc/factory/HaruhiApplication.java">
+        <entry file="file://$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/ioc/annotations/Component.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
-              <folding>
-                <element signature="e#133#134#0" expanded="true" />
-                <element signature="e#166#167#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="168">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/ioc/factory/BeanFactory.java">
+        <entry file="file://$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/ioc/annotations/Inject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="98" lean-forward="true" selection-start-line="98" selection-end-line="98" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#698#714#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TestFramework/src/main/java/sos/nagato/test/Test.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/ioc/factory/XMLReaderFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="53" selection-start-line="53" selection-end-line="53" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1649#1665#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/util/MyReflectUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="23" column="63" selection-start-line="23" selection-start-column="63" selection-end-line="23" selection-end-column="63" />
+            <state relative-caret-position="252">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TestFramework/src/main/resources/sos-spring-core.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/ioc/beans/BeanDefinition.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="11" column="28" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -227,8 +117,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Tag Library Descriptor" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -253,12 +143,18 @@
         <option value="$PROJECT_DIR$/HaruhiFramework/pom.xml" />
         <option value="$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/util/StringUtils.java" />
         <option value="$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/util/MyStringUtils.java" />
-        <option value="$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/ioc/factory/BeanFactory.java" />
         <option value="$PROJECT_DIR$/TestFramework/src/main/resources/sos-spring-core" />
-        <option value="$PROJECT_DIR$/TestFramework/src/main/java/sos/nagato/test/Test.java" />
-        <option value="$PROJECT_DIR$/TestFramework/pom.xml" />
         <option value="$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/ioc/factory/XMLReaderFactory.java" />
+        <option value="$PROJECT_DIR$/TestFramework/pom.xml" />
+        <option value="$PROJECT_DIR$/TestFramework/src/test/java/sos/haruhi/reflect/Book.java" />
+        <option value="$PROJECT_DIR$/TestFramework/src/test/java/sos/haruhi/reflect/ReflectTest.java" />
         <option value="$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/util/MyReflectUtils.java" />
+        <option value="$PROJECT_DIR$/TestFramework/src/main/java/sos/nagato/test/XXX.java" />
+        <option value="$PROJECT_DIR$/TestFramework/src/main/resources/sos-spring-core.xml" />
+        <option value="$PROJECT_DIR$/TestFramework/src/main/java/sos/nagato/test/Test.java" />
+        <option value="$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/ioc/factory/BeanFactory.java" />
+        <option value="$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/ioc/annotations/Component.java" />
+        <option value="$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/ioc/annotations/Inject.java" />
       </list>
     </option>
   </component>
@@ -307,9 +203,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -418,6 +311,18 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="sos" type="462c0819:PsiDirectoryNode" />
               <item name="haruhi" type="462c0819:PsiDirectoryNode" />
+              <item name="ioc" type="462c0819:PsiDirectoryNode" />
+              <item name="prototype" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyFramework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyFramework" type="462c0819:PsiDirectoryNode" />
+              <item name="TestFramework" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="sos" type="462c0819:PsiDirectoryNode" />
+              <item name="haruhi" type="462c0819:PsiDirectoryNode" />
               <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -438,19 +343,46 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="MyFramework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyFramework" type="462c0819:PsiDirectoryNode" />
+              <item name="TestFramework" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyFramework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyFramework" type="462c0819:PsiDirectoryNode" />
+              <item name="TestFramework" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyFramework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyFramework" type="462c0819:PsiDirectoryNode" />
+              <item name="TestFramework" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="reflect" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539612369296" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539698793779" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.44367817" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
@@ -510,6 +442,23 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReflectTest.reflect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TestFramework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sos.haruhi.reflect.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="sos.haruhi.reflect" />
+      <option name="MAIN_CLASS_NAME" value="sos.haruhi.reflect.ReflectTest" />
+      <option name="METHOD_NAME" value="reflect" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -976,10 +925,12 @@
       <item itemvalue="Jetty Server.spring-test" />
       <item itemvalue="Application.BeginAgain" />
       <item itemvalue="Application.Test" />
+      <item itemvalue="JUnit.ReflectTest.reflect" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Test" />
+        <item itemvalue="JUnit.ReflectTest.reflect" />
         <item itemvalue="Application.BeginAgain" />
       </list>
     </recent_temporary>
@@ -1004,18 +955,66 @@
       <workItem from="1539523492415" duration="3167000" />
       <workItem from="1539607042363" duration="1209000" />
       <workItem from="1539608287380" duration="2246000" />
-      <workItem from="1539610595911" duration="1772000" />
+      <workItem from="1539610595911" duration="1837000" />
+      <workItem from="1539691726147" duration="6686000" />
     </task>
+    <task id="LOCAL-00001" summary="MySpring">
+      <created>1539612398212</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1539612398212</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="ReflectTest_reflect - 2018.10.16 at 20h 26m 54s.xml">
+      <configuration name="ReflectTest.reflect" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21253000" />
+    <option name="totallyTimeSpent" value="28004000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19402985" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19616205" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32899022" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.3995657" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32899022" />
+      <window_info anchor="bottom" id="Spring" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32790446" />
+      <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Maven Projects" order="6" weight="0.32995737" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19616205" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1036,7 +1035,7 @@
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info active="true" anchor="bottom" id="Messages" order="13" visible="true" weight="0.32790446" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32790446" />
       <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -1047,7 +1046,7 @@
       <window_info anchor="right" id="Maven Projects" order="6" weight="0.32995737" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -1055,50 +1054,20 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/ioc/factory/XMLReaderFactory.java</url>
-          <line>46</line>
-          <properties />
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/util/MyReflectUtils.java</url>
-          <line>18</line>
-          <properties />
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-      </breakpoints>
-      <breakpoints-dialog>
-        <breakpoints-dialog />
-      </breakpoints-dialog>
-    </breakpoint-manager>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="MySpring" />
+    <option name="LAST_COMMIT_MESSAGE" value="MySpring" />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>MyStringUtils.upperCaseStrFirst(name)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/MyIOC/resource/spring-config.xml" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.0.8.RELEASE/spring-context-5.0.8.RELEASE.jar!/org/springframework/context/support/AbstractRefreshableConfigApplicationContext.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="32" column="82" lean-forward="true" selection-start-line="32" selection-start-column="82" selection-end-line="32" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.0.8.RELEASE/spring-context-5.0.8.RELEASE.jar!/org/springframework/context/support/AbstractRefreshableApplicationContext.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="49" column="32" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.0.8.RELEASE/spring-core-5.0.8.RELEASE.jar!/org/springframework/core/env/StandardEnvironment.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.0.8.RELEASE/spring-core-5.0.8.RELEASE.jar!/org/springframework/lang/Nullable.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -1198,13 +1167,7 @@
     <entry file="file://$PROJECT_DIR$/Venus/pom.xml" />
     <entry file="file://$PROJECT_DIR$/MyIOC/src/sos/haruhi/ioc/factory/BeanFactory.java" />
     <entry file="file://$PROJECT_DIR$/HaruhiFramework/pom.xml" />
-    <entry file="file://$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/ioc/annotations/Inject.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/ioc/prototype/IBeanFactory.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestFramework/src/main/java/sos/nagato/test/ANagato.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/TestFramework/src/main/java/sos/nagato/test/AHaruhi.java">
@@ -1225,70 +1188,67 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TestFramework/src/main/resources/sos-spring-core.tld">
+    <entry file="file://$PROJECT_DIR$/TestFramework/src/main/resources/sos-spring-core.tld" />
+    <entry file="file://$PROJECT_DIR$/TestFramework/src/test/java/sos/haruhi/reflect/Book.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="13" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestFramework/src/main/java/sos/nagato/test/XXX.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestFramework/src/main/java/sos/nagato/test/ZZZ.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="22" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestFramework/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="70" column="26" selection-start-line="70" selection-start-column="26" selection-end-line="70" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/ioc/factory/HaruhiApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+        <state relative-caret-position="252">
+          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
           <folding>
-            <element signature="e#133#134#0" expanded="true" />
-            <element signature="e#166#167#0" expanded="true" />
+            <element signature="e#250#251#0" expanded="true" />
+            <element signature="e#290#291#0" expanded="true" />
+            <element signature="e#322#323#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestFramework/src/main/java/sos/nagato/test/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/ioc/beans/BeanDefinition.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="28" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="28" />
+        <state relative-caret-position="315">
+          <caret line="58" column="28" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TestFramework/src/main/resources/sos-spring-core.xml">
+    <entry file="file://$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/ioc/factory/HaruhiApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+        <state relative-caret-position="105">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#133#134#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestFramework/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="514">
+          <caret line="70" column="36" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestFramework/src/test/java/sos/haruhi/reflect/ReflectTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/util/MyReflectUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="24" column="45" lean-forward="true" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/ioc/factory/XMLReaderFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        <state relative-caret-position="594">
+          <caret line="70" column="37" selection-start-line="70" selection-start-column="37" selection-end-line="70" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1649#1665#0" expanded="true" />
@@ -1296,23 +1256,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/util/MyReflectUtils.java">
+    <entry file="file://$PROJECT_DIR$/TestFramework/src/main/java/sos/nagato/test/ANagato.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="23" column="63" selection-start-line="23" selection-start-column="63" selection-end-line="23" selection-end-column="63" />
+        <state relative-caret-position="147">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestFramework/src/main/resources/sos-spring-schem">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestFramework/src/main/java/sos/nagato/test/ZZZ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestFramework/src/main/java/sos/nagato/test/XXX.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <folding>
+            <element signature="e#140#141#0" expanded="true" />
+            <element signature="e#165#166#0" expanded="true" />
+            <element signature="e#317#318#0" expanded="true" />
+            <element signature="e#347#348#0" expanded="true" />
+            <element signature="e#390#391#0" expanded="true" />
+            <element signature="e#428#429#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestFramework/src/main/resources/sos-spring-core.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestFramework/src/main/java/sos/nagato/test/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="11" column="128" selection-start-line="11" selection-start-column="128" selection-end-line="11" selection-end-column="128" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/ioc/factory/BeanFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1554">
+          <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/ioc/factory/BeanFactory.java">
+    <entry file="file://$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/ioc/annotations/Component.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="98" lean-forward="true" selection-start-line="98" selection-end-line="98" />
+        <state relative-caret-position="168">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/ioc/annotations/Inject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#698#714#0" expanded="true" />
           </folding>
         </state>
       </provider>

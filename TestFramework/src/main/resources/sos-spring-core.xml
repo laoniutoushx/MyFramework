@@ -4,6 +4,7 @@
 
     <bean id="xxx" class="sos.nagato.test.XXX">
         <property name="id" value="2" />
+        <property name="student" ref="zzz" />
         <property name="name" value="老牛" />
     </bean>
 

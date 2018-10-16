@@ -53,12 +53,6 @@ public class BeanFactory implements IBeanFactory {
             map.put(bean.getId(), bean);
         }
     }
-    public Object get(String key){
-        if(map.containsKey(key))
-            return map.get(key);
-        else
-            throw new RuntimeException("未找到此类");
-    }
 
     @Override
     public Object getBean(String name) {
@@ -66,7 +60,7 @@ public class BeanFactory implements IBeanFactory {
         if (singleInstances.get(name) == null) {
             synchronized (this) {
                 BeanDefinition target = (BeanDefinition) map.get(name);
-                result = populateBean(target);
+                result = populateBean(name, target);
                 singleInstances.put(name, result);
             }
         } else {
@@ -75,11 +69,16 @@ public class BeanFactory implements IBeanFactory {
         return result;
     }
 
-    private Object populateBean(BeanDefinition target){
+    private Object populateBean(String name, BeanDefinition target){
         Object result = null;
         try {
             Class clz = Class.forName(target.getBeanClass());
             result = clz.newInstance();
+
+            // ★★★★★★★ 提前暴露实例，防止 set 依赖注入, 简陋处理方法
+            singleInstances.put(name, result);
+            // ★★★★★★★
+
             setPropertyValues(clz, result, target);
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException e) {
             e.printStackTrace();
@@ -118,14 +117,19 @@ public class BeanFactory implements IBeanFactory {
                             Class[] clazzs = m.getParameterTypes();
                             System.out.println(clazzs);
                             Class type = clazzs[0];
+                            if(StringUtils.isAllLowerCase(type.getName().substring(0, 1))){
+
+                            }
                             if(type != String.class){
-                                Method valueOf = type.getMethod("valueOf", String.class);
-                                Object v = valueOf.invoke(type, value);
-                                m.invoke(result, v);
+//                                Method valueOf = type.getMethod("valueOf", Integer.class);
+//                                Object v = valueOf.invoke(type, Integer.valueOf(value));
+                                m.invoke(result, Integer.valueOf(value));
+                            }else{
+                                m.invoke(result, value);
                             }
                         }
                     }
-                } catch (InvocationTargetException | IllegalAccessException | NoSuchMethodException e) {
+                } catch (InvocationTargetException | IllegalAccessException e) {
                      e.printStackTrace();
                 }
             }
