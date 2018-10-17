@@ -11,7 +11,7 @@ import java.lang.annotation.Target;
  */
 //ElementType.TYPE 用于描述类
 
-@Target(ElementType.TYPE)
+@Target({ElementType.FIELD, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Inject {
     

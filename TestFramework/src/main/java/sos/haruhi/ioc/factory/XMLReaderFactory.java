@@ -21,8 +21,10 @@ public abstract class XMLReaderFactory {
 
     public XMLReaderFactory(String configPath){
         Element root = this.getRootElement(configPath);
-        // 1. 加载 所有 bean 到容器中
+        // 1. 解析所有 bean
         List<BeanDefinition> beans = this.parseBeanElement(root, "bean");
+        // 2. 解析 annotation 配置
+        this.parseAnnotationElement(root, "component-scan");
         this.beans = beans;
     }
 
@@ -41,6 +43,16 @@ public abstract class XMLReaderFactory {
             }
         }
         return document.getRootElement();
+    }
+
+    public Element parseAnnotationElement(Element root, String targetName){
+        Element component = (Element) root.selectSingleNode(targetName);
+        if(component != null){
+            Attribute packageName = component.attribute("base-package");
+            List<BeanDefinition> list = new AnnotationReaderFactory().parseAnnotation(packageName.getValue());
+        }
+
+        return null;
     }
 
     public List<BeanDefinition> parseBeanElement(Element root, String targetName) {
