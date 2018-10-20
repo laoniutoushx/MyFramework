@@ -10,7 +10,7 @@ import sos.haruhi.ioc.annotations.Inject;
  * @Date 2018/10/17 20:46
  * @Version 10032
  **/
-@Component
+@Component("order")
 public class Order {
     private int id;
     private String merchantNo;

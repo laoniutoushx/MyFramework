@@ -1,5 +1,6 @@
 package sos.haruhi.ioc.factory;
 
+import org.apache.commons.collections.CollectionUtils;
 import org.dom4j.Attribute;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
@@ -22,10 +23,10 @@ public abstract class XMLReaderFactory {
     public XMLReaderFactory(String configPath){
         Element root = this.getRootElement(configPath);
         // 1. 解析所有 bean
-        List<BeanDefinition> beans = this.parseBeanElement(root, "bean");
+        List<BeanDefinition> xmlbeans = this.parseBeanElement(root, "bean");
         // 2. 解析 annotation 配置
-        this.parseAnnotationElement(root, "component-scan");
-        this.beans = beans;
+        List<BeanDefinition> anbeans = this.parseAnnotationElement(root, "component-scan");
+        this.beans = (List<BeanDefinition>) CollectionUtils.union(xmlbeans, anbeans);
     }
 
     public Element getRootElement(String configPath){
@@ -45,13 +46,13 @@ public abstract class XMLReaderFactory {
         return document.getRootElement();
     }
 
-    public Element parseAnnotationElement(Element root, String targetName){
+    public List<BeanDefinition> parseAnnotationElement(Element root, String targetName){
         Element component = (Element) root.selectSingleNode(targetName);
         if(component != null){
             Attribute packageName = component.attribute("base-package");
             List<BeanDefinition> list = new AnnotationReaderFactory().parseAnnotation(packageName.getValue());
+            return list;
         }
-
         return null;
     }
 

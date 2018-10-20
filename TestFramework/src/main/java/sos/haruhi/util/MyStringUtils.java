@@ -17,4 +17,11 @@ public class MyStringUtils {
         }
         throw new RuntimeException("字符串转换异常");
     }
+
+    public static String lowerCaseStrFirst(String target){
+        if(StringUtils.isNotBlank(target)){
+            return target.substring(0, 1).toLowerCase() + target.substring(1);
+        }
+        throw new RuntimeException("字符串转换异常");
+    }
 }

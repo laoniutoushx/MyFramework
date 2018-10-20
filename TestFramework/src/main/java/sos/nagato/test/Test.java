@@ -11,6 +11,10 @@ public class Test {
     @Inject
     private Order order;
 
+    public void setOrder(Order order) {
+        this.order = order;
+    }
+
     @org.junit.Test
     public void testContainer(){
         BeanFactory beanFactory = new HaruhiApplication(Test.class.getResource("/sos-spring-core.xml").getPath());
@@ -19,6 +23,7 @@ public class Test {
         System.out.println(zzz.getId() + ":" + zzz.getName() + ":" + zzz.getPeople().getName());
         System.out.println(xxx.getId() + ":" + xxx.getName() + ":" + xxx.getStudent().getId() + ":" + xxx.getStudent().getName());
 
-        order.setUserId("haruhi");
+        Test test = (Test) beanFactory.getBean("test");
+        System.out.println(test.order.getOrderDetail());
     }
 }

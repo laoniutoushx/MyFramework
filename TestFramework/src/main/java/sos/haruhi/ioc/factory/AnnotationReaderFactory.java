@@ -3,12 +3,17 @@ package sos.haruhi.ioc.factory;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import sos.haruhi.ioc.annotations.Component;
+import sos.haruhi.ioc.annotations.Inject;
 import sos.haruhi.ioc.beans.BeanDefinition;
+import sos.haruhi.ioc.beans.Property;
+import sos.haruhi.util.MyStringUtils;
 
 import java.io.File;
 import java.io.FileFilter;
 import java.io.IOException;
 import java.lang.annotation.Annotation;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.net.URL;
 import java.net.URLDecoder;
 import java.util.*;
@@ -22,6 +27,8 @@ import java.util.*;
  **/
 public class AnnotationReaderFactory {
     private String packagePath;
+    private Map<String, BeanDefinition> tempDefinition = new HashMap<>();
+    private Map<Class, String> tempClass = new HashMap<>();
 
     public List<BeanDefinition> parseAnnotation(String value) {
         System.out.println(value);
@@ -29,8 +36,51 @@ public class AnnotationReaderFactory {
         this.packagePath = value.replace(".", "/");
         Set<Class> cls = this.loadClass(value);
         Set<Class> annotationCls = getAnnotationClass(cls);
+        List<BeanDefinition> beanDefinitions = packageBeanDefiniton(annotationCls);
+        return beanDefinitions;
+    }
 
-        return null;
+    private List<BeanDefinition> packageBeanDefiniton(Set<Class> annotationCls) {
+        if(CollectionUtils.isNotEmpty(annotationCls)){
+            // 设置 class
+            for(Class clz:annotationCls){
+                BeanDefinition definition = new BeanDefinition();
+                Component component = (Component) clz.getAnnotation(Component.class);
+                String id = component.value();
+                if(StringUtils.isBlank(id)){
+                    id = MyStringUtils.lowerCaseStrFirst(clz.getSimpleName());
+                    definition.setId(id);
+                }else{
+                    definition.setId(id);
+                }
+                definition.setBeanClass(clz.getName());
+                tempDefinition.put(id, definition);
+                tempClass.put(clz, id);
+            }
+            // 设置 property
+            for(Class clz:annotationCls){
+                BeanDefinition definition = tempDefinition.get(tempClass.get(clz));
+                List<Property> properties = packageBeanProporities(clz);
+                definition.setProperties(properties);
+            }
+        }
+        return new ArrayList<>(tempDefinition.values());
+    }
+
+    private List<Property> packageBeanProporities(Class clz) {
+        List<Property> properties = new ArrayList<>();
+        Field[] fields = clz.getDeclaredFields();
+        for(Field field:fields){
+            Inject inject = field.getAnnotation(Inject.class);
+            if(inject != null){
+                Property property = new Property();
+                String id = MyStringUtils.lowerCaseStrFirst(field.getType().getSimpleName());
+                property.setName(field.getName());
+                property.setRef(id);
+                properties.add(property);
+            }
+        }
+        return properties;
     }
 
     private Set<Class> getAnnotationClass(Set<Class> cls) {
