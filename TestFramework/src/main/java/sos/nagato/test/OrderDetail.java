@@ -11,7 +11,7 @@ import java.util.Date;
  * @Date 2018/10/17 20:51
  * @Version 10032
  **/
-@Component
+@Component("order_detail_my_test")
 public class OrderDetail {
     private int id;
     private String productName;

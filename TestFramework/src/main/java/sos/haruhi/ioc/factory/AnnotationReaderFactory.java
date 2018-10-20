@@ -74,7 +74,7 @@ public class AnnotationReaderFactory {
             Inject inject = field.getAnnotation(Inject.class);
             if(inject != null){
                 Property property = new Property();
-                String id = MyStringUtils.lowerCaseStrFirst(field.getType().getSimpleName());
+                String id = tempClass.get(field.getType());
                 property.setName(field.getName());
                 property.setRef(id);
                 properties.add(property);
