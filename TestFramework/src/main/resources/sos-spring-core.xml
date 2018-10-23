@@ -2,6 +2,8 @@
 
 <beans>
     <component-scan base-package="sos.nagato.test" />
+    <aspectj-autoproxy />
+
 
 
     <bean id="xxx" class="sos.nagato.test.XXX">
