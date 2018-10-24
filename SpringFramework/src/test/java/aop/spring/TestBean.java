@@ -1,7 +1,7 @@
-package aop;
+package aop.spring;
 
 /**
- * @ClassName aop.TestBean
+ * @ClassName aop.spring.TestBean
  * @Description TODO
  * @Author Suzumiya Haruhi
  * @Date 2018/10/23 20:43

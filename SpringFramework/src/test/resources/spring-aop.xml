@@ -6,6 +6,6 @@
 
     <aop:aspectj-autoproxy />
 
-    <bean id="test" class="aop.TestBean" />
-    <bean class="aop.AspectJTest" />
+    <bean id="test" class="aop.spring.TestBean" />
+    <bean class="aop.spring.AspectJTest" />
 </beans>
