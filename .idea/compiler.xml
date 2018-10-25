@@ -7,11 +7,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Examination" />
         <module name="SpringFramework" />
         <module name="TestFramework" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
+      <module name="Examination" target="1.5" />
       <module name="SpringFramework" target="1.5" />
       <module name="TestFramework" target="1.8" />
     </bytecodeTargetLevel>
