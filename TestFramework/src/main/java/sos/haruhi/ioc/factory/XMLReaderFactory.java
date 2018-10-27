@@ -6,6 +6,7 @@ import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
+import sos.haruhi.AopParseFactory;
 import sos.haruhi.ioc.beans.BeanDefinition;
 import sos.haruhi.ioc.beans.Property;
 import sos.haruhi.util.MyReflectUtils;
@@ -26,6 +27,9 @@ public abstract class XMLReaderFactory {
         List<BeanDefinition> xmlbeans = this.parseBeanElement(root, "bean");
         // 2. 解析 annotation 配置
         List<BeanDefinition> anbeans = this.parseAnnotationElement(root, "component-scan");
+        // 3. 解析 apo annotation 配置
+        List<BeanDefinition> aopbeans = new AopParseFactory().parseAnnotationElement(root, "aspectj-autoproxy");
+
         this.beans = (List<BeanDefinition>) CollectionUtils.union(xmlbeans, anbeans);
     }
 

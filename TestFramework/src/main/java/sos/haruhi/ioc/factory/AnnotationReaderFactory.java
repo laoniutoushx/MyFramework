@@ -102,6 +102,7 @@ public class AnnotationReaderFactory {
         Enumeration<URL> dirs = null;
         Set<Class> cls = new HashSet<>();
         try {
+            System.out.println("测试-=======" + this.packagePath);
             dirs = Thread.currentThread().getContextClassLoader().getResources(this.packagePath);
             while (dirs.hasMoreElements()) {
                 URL url = dirs.nextElement();
