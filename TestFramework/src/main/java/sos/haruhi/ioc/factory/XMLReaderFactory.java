@@ -27,10 +27,13 @@ public abstract class XMLReaderFactory {
         List<BeanDefinition> xmlbeans = this.parseBeanElement(root, "bean");
         // 2. 解析 annotation 配置
         List<BeanDefinition> anbeans = this.parseAnnotationElement(root, "component-scan");
-        // 3. 解析 apo annotation 配置
-        List<BeanDefinition> aopbeans = new AopParseFactory().parseAnnotationElement(root, "aspectj-autoproxy");
+
+        this.parseAopElemnt
 
         this.beans = (List<BeanDefinition>) CollectionUtils.union(xmlbeans, anbeans);
+
+        // 3. 解析 apo annotation 配置
+        List<BeanDefinition> aopbeans = new AopParseFactory().parseAnnotationElement(root, "aspectj-autoproxy");
     }
 
     public Element getRootElement(String configPath){

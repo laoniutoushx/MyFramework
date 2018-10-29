@@ -8,4 +8,5 @@ package sos.haruhi.aop;
  * @Version 10032
  **/
 public class AopProxyFactory {
+
 }

@@ -16,24 +16,15 @@ import java.util.Set;
  * @Version 10032
  **/
 public class AopParseFactory {
+    public static Map<String, >
 
     public List<BeanDefinition> parseAnnotationElement(Element root, String targetName) {
         Element component = (Element) root.selectSingleNode(targetName);
-        if(component != null){
-            // 全局扫描
+        if(component != null){      // aspectj 配置
+            // 全局扫描 Aspectj
             List<BeanDefinition> list = parseAnnotation();
             return list;
         }
-        return null;
-    }
-
-    private List<BeanDefinition> parseAnnotation() {
-        Set<Class> clazzs = this.loadClassByFile();
-        return null;
-    }
-
-    private Set<Class> loadClassByFile() {
-//        Thread.currentThread().getContextClassLoader().
         return null;
     }
 }
