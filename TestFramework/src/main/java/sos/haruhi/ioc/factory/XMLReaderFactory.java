@@ -28,7 +28,7 @@ public abstract class XMLReaderFactory {
         // 2. 解析 annotation 配置
         List<BeanDefinition> anbeans = this.parseAnnotationElement(root, "component-scan");
 
-        this.parseAopElemnt
+//        this.parseAopElemnt
 
         this.beans = (List<BeanDefinition>) CollectionUtils.union(xmlbeans, anbeans);
 

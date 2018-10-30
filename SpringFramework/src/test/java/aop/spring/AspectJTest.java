@@ -2,6 +2,7 @@ package aop.spring;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
+import org.springframework.stereotype.Component;
 
 /**
  * @ClassName AspectJTest
@@ -10,6 +11,7 @@ import org.aspectj.lang.annotation.*;
  * @Date 2018/10/23 20:45
  * @Version 10032
  **/
+@Component(value = "haruhi")
 @Aspect
 public class AspectJTest {
     @Pointcut("execution(* *.test(..))")
