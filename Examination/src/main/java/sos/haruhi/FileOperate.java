@@ -25,7 +25,7 @@ public class FileOperate {
     }
 
     private String makeFile() throws IOException {
-        File file = new File("S:\\file.txt");
+        File file = new File("F:\\huge.txt");
         FileOutputStream out = new FileOutputStream(file);
         for(int i = 0; i < 1000000; i++){
             out.write((i + "|haruhi" + i + "|22|all看见士大夫立刻觉得舒服了肯定就是\r\n").getBytes());
