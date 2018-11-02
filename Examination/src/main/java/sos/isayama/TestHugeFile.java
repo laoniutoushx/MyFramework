@@ -5,7 +5,7 @@ import java.io.IOException;
 
 public class TestHugeFile {
     public static void main(String[] args) throws IOException {
-        File file = new File("F:\\huge.txt");
+        File file = new File("S:\\huge.txt");
 
 
         FileFactory factory = new FileFactory();

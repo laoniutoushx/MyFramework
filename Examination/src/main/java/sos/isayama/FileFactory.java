@@ -2,10 +2,13 @@ package sos.isayama;
 
 import java.io.*;
 import java.nio.ByteBuffer;
-import java.nio.channels.FileChannel;
+import java.nio.channels.Channel;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class FileFactory {
 
+    private ExecutorService service = Executors.newFixedThreadPool(8);
 
     public void makeFile(File file) throws IOException {
         BufferedWriter writer = new BufferedWriter(new FileWriter(file));
@@ -25,74 +28,47 @@ public class FileFactory {
      * @date:   2018/11/1 20:43
      **/
     public void allocateStartPosAndThreads(File targetFile, int threadCount) throws IOException {
+        RandomAccessFile random = new RandomAccessFile(targetFile, "r";
+        long startPos = 0, endPos = 0;
 
-        String seperator = System.getProperty("line.separator");
+        long perSize = targetFile.length() / threadCount;
 
-        ByteBuffer byteBuffer = ByteBuffer.allocate(256);
-        FileChannel channel = new FileInputStream(targetFile).getChannel();
-        long perSize = channel.size() / threadCount;
+        for(int i = 0; i < threadCount; i++){
+            endPos = (i + 1) * perSize;
+            random.seek(endPos);
 
-        long startPos = channel.position(), endPos = channel.position() + 15;
-
-        for(int i = 1; i < threadCount; i++) {
-
-            channel.position(startPos);
-            ByteBuffer startLine = ByteBuffer.allocate(15);
-            channel.read(startLine);
-            startLine.rewind();
-            byte[] startLineByte = new byte[15];
-            startLine.get(startLineByte);
-            System.out.println(new String(startLineByte, 0, startLineByte.length));
-
-
-            System.out.println("read start pos:" + startPos);
-
-            byte[] tempByte = new byte[256];
-            channel.position(i * perSize);
-
-            if ((channel.read(byteBuffer)) != -1) {        // 未读取到文件末尾
-                int tempStrSize = byteBuffer.position();
-                byteBuffer.rewind();    // position 置为0
-                byteBuffer.get(tempByte);
-                byteBuffer.clear();
-                String tempString = new String(tempByte, 0, tempStrSize);
-                //System.out.println(tempString);
-                int fixPos = tempString.indexOf(seperator);
-                tempByte.
-
-                if(fixPos == -1){
-                    fixPos = 0;
+            char temp = (char) random.read();
+            while(temp != '\n' && temp != '\r'){
+                endPos++;
+                if(endPos >= targetFile.length() - 1){
+                    endPos = targetFile.lastModified() - 1;
+                    break;
                 }
-
-                // read start pos && line end pos
-                endPos = channel.position() + fixPos;
-                System.out.println("read end pos:" + endPos);
-
-                //  && line separator length
-                startPos = endPos + 4;
+                random.seek(endPos);
+                temp = (char) random.read();
             }
+
+            service.execute(new ParticalCalculator(startPos, endPos, targetFile));
+
+            startPos = endPos + 1;
         }
+
     }
 
     private class ParticalCalculator implements Runnable {
         private long startPos;
         private long endPos;
+        private Channel channel;
 
-        public ParticalCalculator(long startPos, long endPos) {
+        public ParticalCalculator(long startPos, long endPos, File targetFile) throws FileNotFoundException {
             this.startPos = startPos;
             this.endPos = endPos;
+            this.channel = new FileOutputStream(targetFile).getChannel();
         }
 
         public void run() {
-
+            ByteBuffer buffer = ByteBuffer.allocate(4096);
+            channel.
         }
     }
-
-    public static void main(String[] args) {
-        String str = "harusdfsdfsdfhi";
-        System.out.println(str.lastIndexOf("ru"));
-        String lineSe = System.getProperty("line.separator");
-        System.out.println(lineSe.getBytes().length);
-    }
-
 }
