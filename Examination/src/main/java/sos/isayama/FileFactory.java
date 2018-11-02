@@ -7,7 +7,6 @@ import java.nio.channels.FileChannel;
 public class FileFactory {
 
 
-
     public void makeFile(File file) throws IOException {
         BufferedWriter writer = new BufferedWriter(new FileWriter(file));
         for(int i = 0; i < 10000000; i++){
@@ -19,33 +18,58 @@ public class FileFactory {
 
     /**
      * @title:
-     * @desc:   分配每个线程的其实位置与结束位置
+     * @desc:   分配每个线程的起始位置与结束位置
      * @param:
      * @return:
      * @auther: Suzumiya Haruhi
      * @date:   2018/11/1 20:43
      **/
     public void allocateStartPosAndThreads(File targetFile, int threadCount) throws IOException {
-        long perSize = targetFile.length() / threadCount;
 
-        String seperator = File.separator;
+        String seperator = System.getProperty("line.separator");
 
-        ByteBuffer byteBuffer = ByteBuffer.allocate(4096);
+        ByteBuffer byteBuffer = ByteBuffer.allocate(256);
         FileChannel channel = new FileInputStream(targetFile).getChannel();
+        long perSize = channel.size() / threadCount;
 
-        for(int i = 0; i < threadCount; i++) {
-            byte[] tempByte = new byte[4096];
+        long startPos = channel.position(), endPos = channel.position() + 15;
+
+        for(int i = 1; i < threadCount; i++) {
+
+            channel.position(startPos);
+            ByteBuffer startLine = ByteBuffer.allocate(15);
+            channel.read(startLine);
+            startLine.rewind();
+            byte[] startLineByte = new byte[15];
+            startLine.get(startLineByte);
+            System.out.println(new String(startLineByte, 0, startLineByte.length));
+
+
+            System.out.println("read start pos:" + startPos);
+
+            byte[] tempByte = new byte[256];
+            channel.position(i * perSize);
+
             if ((channel.read(byteBuffer)) != -1) {        // 未读取到文件末尾
                 int tempStrSize = byteBuffer.position();
                 byteBuffer.rewind();    // position 置为0
                 byteBuffer.get(tempByte);
                 byteBuffer.clear();
                 String tempString = new String(tempByte, 0, tempStrSize);
-
+                //System.out.println(tempString);
                 int fixPos = tempString.indexOf(seperator);
+                tempByte.
 
-                long endPos = perSize * i + fixPos;
-                long startPos = endPos + 1;
+                if(fixPos == -1){
+                    fixPos = 0;
+                }
+
+                // read start pos && line end pos
+                endPos = channel.position() + fixPos;
+                System.out.println("read end pos:" + endPos);
+
+                //  && line separator length
+                startPos = endPos + 4;
             }
         }
     }
@@ -62,6 +86,13 @@ public class FileFactory {
         public void run() {
 
         }
+    }
+
+    public static void main(String[] args) {
+        String str = "harusdfsdfsdfhi";
+        System.out.println(str.lastIndexOf("ru"));
+        String lineSe = System.getProperty("line.separator");
+        System.out.println(lineSe.getBytes().length);
     }
 
 }
