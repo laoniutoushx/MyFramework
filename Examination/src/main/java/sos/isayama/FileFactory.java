@@ -2,7 +2,7 @@ package sos.isayama;
 
 import java.io.*;
 import java.nio.ByteBuffer;
-import java.nio.channels.Channel;
+import java.nio.channels.FileChannel;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -28,7 +28,7 @@ public class FileFactory {
      * @date:   2018/11/1 20:43
      **/
     public void allocateStartPosAndThreads(File targetFile, int threadCount) throws IOException {
-        RandomAccessFile random = new RandomAccessFile(targetFile, "r";
+        RandomAccessFile random = new RandomAccessFile(targetFile, "r");
         long startPos = 0, endPos = 0;
 
         long perSize = targetFile.length() / threadCount;
@@ -41,14 +41,14 @@ public class FileFactory {
             while(temp != '\n' && temp != '\r'){
                 endPos++;
                 if(endPos >= targetFile.length() - 1){
-                    endPos = targetFile.lastModified() - 1;
+                    endPos = targetFile.length() - 1;
                     break;
                 }
                 random.seek(endPos);
                 temp = (char) random.read();
             }
-
-            service.execute(new ParticalCalculator(startPos, endPos, targetFile));
+            System.out.println("start:" + startPos + ", endPos:" + endPos);
+//            service.execute(new ParticalCalculator(startPos, endPos, targetFile));
 
             startPos = endPos + 1;
         }
@@ -58,17 +58,29 @@ public class FileFactory {
     private class ParticalCalculator implements Runnable {
         private long startPos;
         private long endPos;
-        private Channel channel;
+        private FileChannel channel;
 
-        public ParticalCalculator(long startPos, long endPos, File targetFile) throws FileNotFoundException {
+        public ParticalCalculator(long startPos, long endPos, File targetFile) throws IOException {
             this.startPos = startPos;
             this.endPos = endPos;
             this.channel = new FileOutputStream(targetFile).getChannel();
+            this.channel.position(startPos);
         }
 
         public void run() {
-            ByteBuffer buffer = ByteBuffer.allocate(4096);
-            channel.
+            try{
+                ByteBuffer buffer = ByteBuffer.allocate(4096);
+                byte[] temp = new byte[4096];
+                channel.read(buffer);
+                buffer.rewind();
+                buffer.get(temp);
+                buffer.clear();
+                System.out.println(new String(temp));
+
+            }catch(Exception e){
+
+            }
+
         }
     }
 }
