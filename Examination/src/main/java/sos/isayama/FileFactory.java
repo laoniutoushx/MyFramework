@@ -2,7 +2,9 @@ package sos.isayama;
 
 import java.io.*;
 import java.nio.ByteBuffer;
+import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
+import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -28,6 +30,7 @@ public class FileFactory {
      * @date:   2018/11/1 20:43
      **/
     public void allocateStartPosAndThreads(File targetFile, int threadCount) throws IOException {
+        CyclicBarrier barrier = new CyclicBarrier(threadCount);
         RandomAccessFile random = new RandomAccessFile(targetFile, "r");
         long startPos = 0, endPos = 0;
 
@@ -48,37 +51,41 @@ public class FileFactory {
                 temp = (char) random.read();
             }
             System.out.println("start:" + startPos + ", endPos:" + endPos);
-//            service.execute(new ParticalCalculator(startPos, endPos, targetFile));
+            service.execute(new ParticalCalculator(startPos, endPos, targetFile, barrier));
 
             startPos = endPos + 1;
         }
+
+        service.shutdown();
+        System.out.println("程序结束");
 
     }
 
     private class ParticalCalculator implements Runnable {
         private long startPos;
         private long endPos;
-        private FileChannel channel;
+        private MappedByteBuffer mapBuffer;
+        private CyclicBarrier barrier;
 
-        public ParticalCalculator(long startPos, long endPos, File targetFile) throws IOException {
+        public ParticalCalculator(long startPos, long endPos, File targetFile, CyclicBarrier barrier) throws IOException {
             this.startPos = startPos;
             this.endPos = endPos;
-            this.channel = new FileOutputStream(targetFile).getChannel();
-            this.channel.position(startPos);
+            this.mapBuffer = new RandomAccessFile(targetFile, "r").getChannel()
+                    .map(FileChannel.MapMode.READ_ONLY, startPos, endPos - startPos);
+            this.barrier = barrier;
         }
 
         public void run() {
             try{
-                ByteBuffer buffer = ByteBuffer.allocate(4096);
-                byte[] temp = new byte[4096];
-                channel.read(buffer);
-                buffer.rewind();
-                buffer.get(temp);
-                buffer.clear();
+                byte[] temp = new byte[4096/*(int) (endPos - startPos)*/];
+                mapBuffer.get(temp);
                 System.out.println(new String(temp));
 
-            }catch(Exception e){
+                barrier.await();
 
+
+            }catch(Exception e){
+                System.out.println(e.getMessage());
             }
 
         }

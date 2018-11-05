@@ -12,7 +12,6 @@
     <list default="true" id="5bceaee0-fcb6-4153-9a52-8ac53121946f" name="Default" comment="MySpring">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Examination/src/main/java/sos/isayama/FileFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/Examination/src/main/java/sos/isayama/FileFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examination/src/main/java/sos/isayama/TestHugeFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/Examination/src/main/java/sos/isayama/TestHugeFile.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/MyIOC/target/classes/" />
     <ignored path="$PROJECT_DIR$/MyIOC/target/test/" />
@@ -39,11 +38,11 @@
     <session id="-2047967386">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="20" />
+          <entry key="project.closed" value="21" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.21" value="1" />
-          <entry key="project.open.time.22" value="1" />
+          <entry key="project.open.time.22" value="2" />
           <entry key="project.open.time.23" value="2" />
           <entry key="project.open.time.25" value="3" />
           <entry key="project.open.time.26" value="3" />
@@ -53,7 +52,7 @@
           <entry key="project.open.time.45" value="1" />
           <entry key="project.open.time.6" value="5" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="25" />
+          <entry key="project.opened" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -80,7 +79,7 @@
         <counts>
           <entry key="class" value="1" />
           <entry key="dummy" value="4" />
-          <entry key="java" value="14474" />
+          <entry key="java" value="14644" />
           <entry key="sos-spring-core" value="136" />
           <entry key="txt" value="12" />
           <entry key="xml" value="504" />
@@ -89,7 +88,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="14474" />
+          <entry key="JAVA" value="14644" />
           <entry key="PLAIN_TEXT" value="16" />
           <entry key="XML" value="640" />
         </counts>
@@ -105,8 +104,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Examination/src/main/java/sos/isayama/FileFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="39" column="45" lean-forward="true" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
+            <state relative-caret-position="168">
+              <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -117,7 +116,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Examination/src/main/java/sos/isayama/TestHugeFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
+            <state relative-caret-position="273">
               <caret line="14" column="50" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -194,8 +193,8 @@
         <option value="$PROJECT_DIR$/Examination/src/main/java/sos/nagato/Testing.java" />
         <option value="$PROJECT_DIR$/Examination/src/main/java/sos/nagato/FileFactory.java" />
         <option value="$PROJECT_DIR$/Examination/src/main/java/sos/haruhi/FileOperate.java" />
-        <option value="$PROJECT_DIR$/Examination/src/main/java/sos/isayama/FileFactory.java" />
         <option value="$PROJECT_DIR$/Examination/src/main/java/sos/isayama/TestHugeFile.java" />
+        <option value="$PROJECT_DIR$/Examination/src/main/java/sos/isayama/FileFactory.java" />
       </list>
     </option>
   </component>
@@ -231,9 +230,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1383" />
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+    <option name="width" value="1384" />
     <option name="height" value="755" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -244,8 +243,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -302,14 +302,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="AopNamespaceHandler&#9;PSI&#9;JAVA://org.springframework.aop.config.AopNamespaceHandler&#10;AopN&#9;FILE&#9;jar://S:/apache-maven-3.5.2/responsity/org/springframework/spring-aop/4.3.11.RELEASE/spring-aop-4.3.11.RELEASE-sources.jar!/org/springframework/aop/config/AopNamespaceHandler.java&#10;DefaultBean&#9;PSI&#9;JAVA://org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader&#10;AopName&#9;PSI&#9;JAVA://org.springframework.aop.config.AopNamespaceHandler&#10;AspectJAutoPro&#9;PSI&#9;JAVA://org.springframework.aop.config.AspectJAutoProxyBeanDefinitionParser&#10;aspectj-autoproxy&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541339213463" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541342764239" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -933,7 +932,8 @@
       <workItem from="1540878597193" duration="6672000" />
       <workItem from="1540965282329" duration="11446000" />
       <workItem from="1541127181027" duration="12625000" />
-      <workItem from="1541210993787" duration="4251000" />
+      <workItem from="1541210993787" duration="4279000" />
+      <workItem from="1541418479001" duration="1923000" />
     </task>
     <task id="LOCAL-00001" summary="MySpring">
       <created>1539612398212</created>
@@ -1012,7 +1012,14 @@
       <option name="project" value="LOCAL" />
       <updated>1541173909856</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="MySpring">
+      <created>1541342754493</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1541342754493</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1048,13 +1055,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119472000" />
+    <option name="totallyTimeSpent" value="121423000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23525469" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2386059" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1064,7 +1071,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4969743" weight="0.32587412" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4969743" visible="true" weight="0.32587412" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49865952" weight="0.3972028" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1104,12 +1111,16 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Examination/src/main/java/sos/isayama/FileFactory.java</url>
-          <line>37</line>
+          <line>40</line>
           <properties />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -1510,20 +1521,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Examination/src/main/java/sos/isayama/TestHugeFile.java">
+    <entry file="file://$PROJECT_DIR$/Examination/src/main/java/sos/isayama/FileFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="50" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
+        <state relative-caret-position="168">
+          <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Examination/src/main/java/sos/isayama/FileFactory.java">
+    <entry file="file://$PROJECT_DIR$/Examination/src/main/java/sos/isayama/TestHugeFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="39" column="45" lean-forward="true" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
+        <state relative-caret-position="273">
+          <caret line="14" column="50" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
