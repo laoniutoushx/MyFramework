@@ -4,9 +4,8 @@ import java.io.*;
 import java.nio.ByteBuffer;
 import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
-import java.util.concurrent.CyclicBarrier;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.util.concurrent.*;
+import java.util.concurrent.CountDownLatch;
 
 public class FileFactory {
 
@@ -29,8 +28,8 @@ public class FileFactory {
      * @auther: Suzumiya Haruhi
      * @date:   2018/11/1 20:43
      **/
-    public void allocateStartPosAndThreads(File targetFile, int threadCount) throws IOException {
-        CyclicBarrier barrier = new CyclicBarrier(threadCount);
+    public void allocateStartPosAndThreads(File targetFile, int threadCount) throws IOException, InterruptedException {
+        CountDownLatch latch = new CountDownLatch(threadCount);
         RandomAccessFile random = new RandomAccessFile(targetFile, "r");
         long startPos = 0, endPos = 0;
 
@@ -51,11 +50,11 @@ public class FileFactory {
                 temp = (char) random.read();
             }
             System.out.println("start:" + startPos + ", endPos:" + endPos);
-            service.execute(new ParticalCalculator(startPos, endPos, targetFile, barrier));
+            service.execute(new ParticalCalculator(startPos, endPos, targetFile, latch));
 
             startPos = endPos + 1;
         }
-
+        latch.await(10, TimeUnit.SECONDS);     // 挂起当前主线程，直到 latch = 0
         service.shutdown();
         System.out.println("程序结束");
 
@@ -65,23 +64,23 @@ public class FileFactory {
         private long startPos;
         private long endPos;
         private MappedByteBuffer mapBuffer;
-        private CyclicBarrier barrier;
+        private CountDownLatch latch;
 
-        public ParticalCalculator(long startPos, long endPos, File targetFile, CyclicBarrier barrier) throws IOException {
+        public ParticalCalculator(long startPos, long endPos, File targetFile, CountDownLatch latch) throws IOException {
             this.startPos = startPos;
             this.endPos = endPos;
             this.mapBuffer = new RandomAccessFile(targetFile, "r").getChannel()
                     .map(FileChannel.MapMode.READ_ONLY, startPos, endPos - startPos);
-            this.barrier = barrier;
+            this.latch = latch;
         }
 
         public void run() {
             try{
-                byte[] temp = new byte[4096/*(int) (endPos - startPos)*/];
+                byte[] temp = new byte[(int) (endPos - startPos)];
                 mapBuffer.get(temp);
                 System.out.println(new String(temp));
 
-                barrier.await();
+                latch.countDown();
 
 
             }catch(Exception e){

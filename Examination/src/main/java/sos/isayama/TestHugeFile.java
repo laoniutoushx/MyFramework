@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class TestHugeFile {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, InterruptedException {
         File file = new File("S:\\huge.txt");
         System.out.println("file length:" + file.length());
 
