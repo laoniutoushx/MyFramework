@@ -18,11 +18,11 @@ import java.util.Set;
 public class AopParseFactory {
     public static Map<String, >
 
-    public List<BeanDefinition> parseAnnotationElement(Element root, String targetName) {
-        Element component = (Element) root.selectSingleNode(targetName);
-        if(component != null){      // aspectj 配置
-            // 全局扫描 Aspectj
-            List<BeanDefinition> list = parseAnnotation();
+    public List<BeanDefinition> parseAnnotationElement(Element root, String packageXml, String aspectXml){
+        Element component = (Element) root.selectSingleNode(packageXml);
+        if(component != null){
+            Attribute packageName = component.attribute("base-package");
+            List<BeanDefinition> list = new AnnotationReaderFactory().parseAnnotation(packageName.getValue());
             return list;
         }
         return null;
