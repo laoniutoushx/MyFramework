@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Examination" />
         <module name="SpringFramework" />
+        <module name="Test" />
         <module name="TestFramework" />
       </profile>
     </annotationProcessing>
@@ -16,6 +17,7 @@
       <module name="Examination" target="1.5" />
       <module name="fx-kejian-webapp" target="1.5" />
       <module name="SpringFramework" target="1.5" />
+      <module name="Test" target="1.5" />
       <module name="TestFramework" target="1.8" />
     </bytecodeTargetLevel>
   </component>
