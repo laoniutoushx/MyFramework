@@ -46,7 +46,7 @@ public class AopParseFactory {
     public List<AopBeanDefinition> parseAnnotation(String value) {
         System.out.println(value);
         // 包地址
-        String packageName = value.replace(".", "/");
+        this.packagePath = value.replace(".", "/");
         Set<Class> cls = this.loadClass(value);
         Set<Class> annotationCls = getAnnotationClass(cls);
         List<AopBeanDefinition> beanDefinitions = packageBeanDefiniton(annotationCls);

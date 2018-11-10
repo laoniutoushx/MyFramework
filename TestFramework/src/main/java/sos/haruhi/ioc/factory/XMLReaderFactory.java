@@ -1,6 +1,8 @@
 package sos.haruhi.ioc.factory;
 
+import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import org.apache.commons.collections.CollectionUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.dom4j.Attribute;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
@@ -14,27 +16,35 @@ import sos.haruhi.util.MyReflectUtils;
 import sos.haruhi.util.MyStringUtils;
 
 import java.io.File;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 public abstract class XMLReaderFactory {
     private SAXReader reader = null;
     private Document document = null;
     private List<BeanDefinition> beans;
+    private List<AopBeanDefinition> aopBeans;
+    private Map<String, AopBeanDefinition> beanDefinitionWhichHasAopBeanDefinition = new ConcurrentHashMap<>();
 
     public XMLReaderFactory(String configPath){
         Element root = this.getRootElement(configPath);
-        // 1. 解析所有 bean
+        // 1. 解析 apo annotation 配置
+        List<AopBeanDefinition> aopbeans = new AopParseFactory().parseAnnotationElement(root,"component-scan", "aspectj-autoproxy");
+        this.aopBeans = aopbeans;
+
+        // 2. 解析所有 bean
         List<BeanDefinition> xmlbeans = this.parseBeanElement(root, "bean");
-        // 2. 解析 annotation 配置
-        List<BeanDefinition> anbeans = this.parseAnnotationElement(root, "component-scan");
+
 
 //        this.parseAopElemnt
+        // 3. 解析 annotation 配置
+        List<BeanDefinition> anbeans = this.parseAnnotationElement(root, "component-scan");
 
         this.beans = (List<BeanDefinition>) CollectionUtils.union(xmlbeans, anbeans);
 
-        // 3. 解析 apo annotation 配置
-        List<AopBeanDefinition> aopbeans = new AopParseFactory().parseAnnotationElement(root,"component-scan", "aspectj-autoproxy");
     }
 
     public Element getRootElement(String configPath){
@@ -76,6 +86,33 @@ public abstract class XMLReaderFactory {
 
             }
             beanDefinition.setProperties(parseBeanProperty(bean, "property"));
+
+            String id = beanDefinition.getId(); // 获取 bean 的id
+            String beanClass = beanDefinition.getBeanClass(); // 获取bean 的class
+            for(AopBeanDefinition aopBeanDefinition:this.aopBeans){
+                // 检测是否有匹配 代理类
+                // 1. 获取切入点字符串
+                String point_cut_str = aopBeanDefinition.getPointCut();
+                // 2. 获取 class 实例
+                Class clz = null;
+                try {
+                    clz = Class.forName(beanClass);
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+                // 3. 遍历 class 方法，确认是否需要增强器
+                Method[] methods = clz.getDeclaredMethods();
+                for(Method method:methods){
+                    String method_name = method.getName();
+                    if(StringUtils.isNotBlank(point_cut_str)){
+                        int index = point_cut_str.indexOf(method_name);
+                        if(index > -1){
+                            beanDefinitionWhichHasAopBeanDefinition.put(id, aopBeanDefinition);
+                        }
+                    }
+                }
+            }
+
             list.add(beanDefinition);
         }
         return list;
@@ -98,6 +135,10 @@ public abstract class XMLReaderFactory {
 
     public List<BeanDefinition> getBeans(){
         return this.beans;
+    }
+
+    public Map<String, AopBeanDefinition> getAopBeans(){
+        return this.beanDefinitionWhichHasAopBeanDefinition;
     }
 
 }

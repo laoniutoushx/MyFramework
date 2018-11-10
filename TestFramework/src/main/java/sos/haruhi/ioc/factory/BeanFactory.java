@@ -1,7 +1,9 @@
 package sos.haruhi.ioc.factory;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.tuple.Pair;
 import org.dom4j.Element;
+import sos.haruhi.ioc.beans.AopBeanDefinition;
 import sos.haruhi.ioc.beans.BeanDefinition;
 import sos.haruhi.ioc.beans.Property;
 import sos.haruhi.ioc.prototype.IBeanFactory;
@@ -25,14 +27,15 @@ public class BeanFactory implements IBeanFactory {
     private final static Set<String> set = new ConcurrentSkipListSet<>();
 
     private final static Map<String, Object> singleInstances = new ConcurrentHashMap<>();
-
+    private Map<String, AopBeanDefinition> hasAop = null;
 
     public BeanFactory(String configPath){
-        List<BeanDefinition> beans = this.initXMLConfig(configPath);
-        this.registerBean(beans);
+        Pair<List<BeanDefinition>, Map<String, AopBeanDefinition>> pair = this.initXMLConfig(configPath);
+        this.registerBean(pair.getLeft());
+        this.hasAop = pair.getRight();
     }
 
-    private List<BeanDefinition> initXMLConfig(String configPath){
+    private Pair<List<BeanDefinition>, Map<String, AopBeanDefinition>> initXMLConfig(String configPath){
         XMLReaderFactory xmlReaderFactory = new XMLReaderFactory(configPath) {
             @Override
             public Element getRootElement(String configPath) {
@@ -44,7 +47,7 @@ public class BeanFactory implements IBeanFactory {
                 return super.parseBeanElement(root, targetName);
             }
         };
-        return xmlReaderFactory.getBeans();
+        return Pair.of(xmlReaderFactory.getBeans(), xmlReaderFactory.getAopBeans());
     }
 
     protected void registerBean(List<BeanDefinition> beans){
@@ -71,6 +74,12 @@ public class BeanFactory implements IBeanFactory {
 
     private Object populateBean(String name, BeanDefinition target){
         Object result = null;
+
+        // 判断是否使用增强
+        if(hasAop.get(name) != null){
+            System.out.println("增强");
+        }
+
         try {
             Class clz = Class.forName(target.getBeanClass());
             result = clz.newInstance();
