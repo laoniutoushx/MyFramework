@@ -138,12 +138,18 @@ public class AopParseFactory {
             // 设置 aspectj
             for(Class clz:annotationCls){
                 AopBeanDefinition aopBeanDefinition = new AopBeanDefinition();
+                aopBeanDefinition.setBeanClass(clz.getName());
+
                 Aspect aspect = (Aspect) clz.getAnnotation(Aspect.class);
                 Method[] methods = clz.getDeclaredMethods();
                 for (Method method : methods) {
                     PointCut pointCut = method.getAnnotation(PointCut.class);
-                    if(pointCut != null)
-                        aopBeanDefinition.setPointCut(pointCut.value());
+                    if(pointCut != null) {
+                        String pointCutStr = pointCut.value();
+                        aopBeanDefinition.setPointCut(pointCutStr);
+                        aopBeanDefinition.setInterceptorMethodName(
+                                pointCutStr.substring(pointCutStr.indexOf(".") + 1, pointCutStr.lastIndexOf("(")));
+                    }
                     Around around = method.getAnnotation(Around.class);
                     if(around != null)
                         aopBeanDefinition.setArount(around.value());

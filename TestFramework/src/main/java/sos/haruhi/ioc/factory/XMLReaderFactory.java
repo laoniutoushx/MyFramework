@@ -18,6 +18,7 @@ import sos.haruhi.util.MyStringUtils;
 import java.io.File;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -27,7 +28,7 @@ public abstract class XMLReaderFactory {
     private Document document = null;
     private List<BeanDefinition> beans;
     private List<AopBeanDefinition> aopBeans;
-    private Map<String, AopBeanDefinition> beanDefinitionWhichHasAopBeanDefinition = new ConcurrentHashMap<>();
+    private Map<String, List<AopBeanDefinition>> beanDefinitionWhichHasAopBeanDefinition = new ConcurrentHashMap<>();
 
     public XMLReaderFactory(String configPath){
         Element root = this.getRootElement(configPath);
@@ -107,7 +108,15 @@ public abstract class XMLReaderFactory {
                     if(StringUtils.isNotBlank(point_cut_str)){
                         int index = point_cut_str.indexOf(method_name);
                         if(index > -1){
-                            beanDefinitionWhichHasAopBeanDefinition.put(id, aopBeanDefinition);
+                            if(beanDefinitionWhichHasAopBeanDefinition.get(id) == null){
+                                List<AopBeanDefinition> aopCandidateAdvisor = new LinkedList<>();
+                                aopCandidateAdvisor.add(aopBeanDefinition);
+                                beanDefinitionWhichHasAopBeanDefinition.put(id, aopCandidateAdvisor);
+                            }else{
+                                List<AopBeanDefinition> aopCandidateAdvisor
+                                        = beanDefinitionWhichHasAopBeanDefinition.get(id);
+                                aopCandidateAdvisor.add(aopBeanDefinition);
+                            }
                         }
                     }
                 }
@@ -137,7 +146,7 @@ public abstract class XMLReaderFactory {
         return this.beans;
     }
 
-    public Map<String, AopBeanDefinition> getAopBeans(){
+    public Map<String, List<AopBeanDefinition>> getAopBeans(){
         return this.beanDefinitionWhichHasAopBeanDefinition;
     }
 

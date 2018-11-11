@@ -15,21 +15,21 @@ import org.springframework.stereotype.Component;
 @Aspect
 public class AspectJTest {
     @Pointcut("execution(* *.test(..))")
-    public void test(){
+    public void tet(){
 
     }
 
-    @Before("test()")
+    @Before("tet()")
     public void beforeTest(){
         System.out.println("beforeTest");
     }
 
-    @After("test()")
+    @After("tet()")
     public void afterTest(){
         System.out.println("afterTest");
     }
 
-    @Around("test()")
+    @Around("tet()")
     public Object arountTest(ProceedingJoinPoint joinPoint){
         System.out.println("before1");
         Object o = null;

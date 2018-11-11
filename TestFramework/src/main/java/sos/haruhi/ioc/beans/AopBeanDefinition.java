@@ -8,10 +8,20 @@ package sos.haruhi.ioc.beans;
  * @Version 10032
  **/
 public class AopBeanDefinition {
+    private String beanClass;
     private String pointCut;
     private String before;
     private String arount;
     private String after;
+    private String interceptorMethodName;
+
+    public String getBeanClass() {
+        return beanClass;
+    }
+
+    public void setBeanClass(String beanClass) {
+        this.beanClass = beanClass;
+    }
 
     public String getPointCut() {
         return pointCut;
@@ -43,5 +53,13 @@ public class AopBeanDefinition {
 
     public void setAfter(String after) {
         this.after = after;
+    }
+
+    public String getInterceptorMethodName() {
+        return interceptorMethodName;
+    }
+
+    public void setInterceptorMethodName(String interceptorMethodName) {
+        this.interceptorMethodName = interceptorMethodName;
     }
 }

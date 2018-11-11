@@ -21,12 +21,12 @@ public class ZZZAdvisor {
 
     }
 
-    @Before("getName()")
+    @Before("zzz()")
     public void beforeZZZ(){
         System.out.println("Before get ZZZ name");
     }
 
-    @Around("getName()")
+    @Around("zzz()")
     public void arountZZZ(ProceedingJoinPoint joinPoint){
 
     }
