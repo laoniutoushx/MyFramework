@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: org.ow2.asm:asm:6.2">
     <CLASSES>
-      <root url="jar://S:/apache-maven-3.5.2/responsity/org/ow2/asm/asm/6.2/asm-6.2.jar!/" />
+      <root url="jar://S:/apache-maven-3.6.0/repository/org/ow2/asm/asm/6.2/asm-6.2.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://S:/apache-maven-3.5.2/responsity/org/ow2/asm/asm/6.2/asm-6.2-javadoc.jar!/" />
+      <root url="jar://S:/apache-maven-3.6.0/repository/org/ow2/asm/asm/6.2/asm-6.2-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://S:/apache-maven-3.5.2/responsity/org/ow2/asm/asm/6.2/asm-6.2-sources.jar!/" />
+      <root url="jar://S:/apache-maven-3.6.0/repository/org/ow2/asm/asm/6.2/asm-6.2-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

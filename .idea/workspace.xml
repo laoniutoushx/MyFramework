@@ -5,9 +5,6 @@
       <artifact name="Venus:war exploded" />
     </artifacts-to-build>
   </component>
-  <component name="BookmarkManager">
-    <bookmark url="jar://S:/apache-maven-3.5.2/responsity/org/springframework/spring-beans/4.3.11.RELEASE/spring-beans-4.3.11.RELEASE-sources.jar!/org/springframework/beans/factory/support/AbstractBeanDefinitionReader.java" description="int loadCount = loadBeanDefinitions(resources);" line="216" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="5bceaee0-fcb6-4153-9a52-8ac53121946f" name="Default" comment="MySpring">
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__cglib_cglib_3_2_7.xml" afterDir="false" />
@@ -57,8 +54,8 @@
     <session id="-2047967386">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="24" />
-          <entry key="project.open.time.0" value="1" />
+          <entry key="project.closed" value="25" />
+          <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.22" value="3" />
@@ -71,14 +68,14 @@
           <entry key="project.open.time.45" value="1" />
           <entry key="project.open.time.6" value="5" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="29" />
+          <entry key="project.opened" value="30" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="AbstractApplicationContext" value="1" />
           <entry key="class" value="56" />
-          <entry key="java" value="354" />
+          <entry key="java" value="360" />
           <entry key="sos-spring-core" value="1" />
           <entry key="sos-spring-schem" value="1" />
           <entry key="tld" value="1" />
@@ -89,7 +86,7 @@
         <counts>
           <entry key="CLASS" value="56" />
           <entry key="DTD" value="1" />
-          <entry key="JAVA" value="354" />
+          <entry key="JAVA" value="360" />
           <entry key="UML" value="1" />
           <entry key="XML" value="36" />
         </counts>
@@ -98,7 +95,7 @@
         <counts>
           <entry key="class" value="1" />
           <entry key="dummy" value="4" />
-          <entry key="java" value="19234" />
+          <entry key="java" value="21695" />
           <entry key="sos-spring-core" value="136" />
           <entry key="txt" value="12" />
           <entry key="xml" value="565" />
@@ -107,7 +104,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="19234" />
+          <entry key="JAVA" value="21695" />
           <entry key="PLAIN_TEXT" value="16" />
           <entry key="XML" value="701" />
         </counts>
@@ -121,19 +118,37 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/ioc/factory/BeanFactory.java">
+        <entry file="file://$PROJECT_DIR$/Examination/src/main/java/sos/yuki/FileParseAndInstore.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="175" column="68" lean-forward="true" selection-start-line="175" selection-start-column="68" selection-end-line="175" selection-end-column="68" />
+            <state relative-caret-position="352">
+              <caret line="34" column="39" lean-forward="true" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#453#461#0" expanded="true" />
+                <element signature="e#1049#1055#0" expanded="true" />
+                <element signature="e#1788#1892#0" expanded="true" />
+                <element signature="e#1891#1892#0" expanded="true" />
+                <element signature="e#1653#1779#0" expanded="true" />
+                <element signature="e#1778#1779#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TestFramework/src/main/java/sos/nagato/test/Test.java">
+        <entry file="jar://G:/tools/src.zip!/java/util/concurrent/BlockingQueue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="399">
+              <caret line="275" column="6" selection-start-line="275" selection-start-column="6" selection-end-line="275" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Examination/src/main/java/sos/nagato/FileFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="117" column="17" lean-forward="true" selection-start-line="117" selection-start-column="17" selection-end-line="117" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -156,6 +171,7 @@
       <find>CyclicBarrier</find>
       <find>addFileClass</find>
       <find>setBean</find>
+      <find>parseLines</find>
     </findStrings>
     <replaceStrings>
       <replace>CountDownLatch</replace>
@@ -167,8 +183,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/TestFramework/src/test/java/sos/haruhi/reflect/ReflectTest.java" />
-        <option value="$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/util/MyReflectUtils.java" />
         <option value="$PROJECT_DIR$/TestFramework/src/main/java/sos/nagato/test/XXX.java" />
         <option value="$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/ioc/annotations/Inject.java" />
         <option value="$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/util/MyStringUtils.java" />
@@ -218,6 +232,8 @@
         <option value="$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/aop/AopProxyFactory.java" />
         <option value="$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/aop/MyCallBackFilter.java" />
         <option value="$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/ioc/factory/BeanFactory.java" />
+        <option value="$PROJECT_DIR$/Examination/src/main/java/sos/yuki/MakeFakeFile.java" />
+        <option value="$PROJECT_DIR$/Examination/src/main/java/sos/yuki/FileParseAndInstore.java" />
       </list>
     </option>
   </component>
@@ -230,9 +246,9 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="S:\apache-maven-3.5.2\responsity" />
-        <option name="mavenHome" value="S:/apache-maven-3.5.2" />
-        <option name="userSettingsFile" value="S:\apache-maven-3.5.2\conf\settings.xml" />
+        <option name="localRepository" value="S:\apache-maven-3.6.0\repository" />
+        <option name="mavenHome" value="S:/apache-maven-3.6.0" />
+        <option name="userSettingsFile" value="S:\apache-maven-3.6.0\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -266,8 +282,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -279,95 +293,25 @@
             <path>
               <item name="MyFramework" type="b2602c69:ProjectViewProjectNode" />
               <item name="MyFramework" type="462c0819:PsiDirectoryNode" />
-              <item name="SpringFramework" type="462c0819:PsiDirectoryNode" />
+              <item name="Examination" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MyFramework" type="b2602c69:ProjectViewProjectNode" />
               <item name="MyFramework" type="462c0819:PsiDirectoryNode" />
-              <item name="SpringFramework" type="462c0819:PsiDirectoryNode" />
+              <item name="Examination" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MyFramework" type="b2602c69:ProjectViewProjectNode" />
               <item name="MyFramework" type="462c0819:PsiDirectoryNode" />
-              <item name="SpringFramework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MyFramework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MyFramework" type="462c0819:PsiDirectoryNode" />
-              <item name="SpringFramework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MyFramework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MyFramework" type="462c0819:PsiDirectoryNode" />
-              <item name="SpringFramework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MyFramework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MyFramework" type="462c0819:PsiDirectoryNode" />
-              <item name="SpringFramework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="aop" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MyFramework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MyFramework" type="462c0819:PsiDirectoryNode" />
-              <item name="SpringFramework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="aop" type="462c0819:PsiDirectoryNode" />
-              <item name="method" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MyFramework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MyFramework" type="462c0819:PsiDirectoryNode" />
-              <item name="SpringFramework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="aop" type="462c0819:PsiDirectoryNode" />
-              <item name="spring" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MyFramework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MyFramework" type="462c0819:PsiDirectoryNode" />
-              <item name="SpringFramework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MyFramework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MyFramework" type="462c0819:PsiDirectoryNode" />
-              <item name="TestFramework" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MyFramework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MyFramework" type="462c0819:PsiDirectoryNode" />
-              <item name="TestFramework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MyFramework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MyFramework" type="462c0819:PsiDirectoryNode" />
-              <item name="TestFramework" type="462c0819:PsiDirectoryNode" />
+              <item name="Examination" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MyFramework" type="b2602c69:ProjectViewProjectNode" />
               <item name="MyFramework" type="462c0819:PsiDirectoryNode" />
-              <item name="TestFramework" type="462c0819:PsiDirectoryNode" />
+              <item name="Examination" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -375,7 +319,7 @@
             <path>
               <item name="MyFramework" type="b2602c69:ProjectViewProjectNode" />
               <item name="MyFramework" type="462c0819:PsiDirectoryNode" />
-              <item name="TestFramework" type="462c0819:PsiDirectoryNode" />
+              <item name="Examination" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -384,92 +328,36 @@
             <path>
               <item name="MyFramework" type="b2602c69:ProjectViewProjectNode" />
               <item name="MyFramework" type="462c0819:PsiDirectoryNode" />
-              <item name="TestFramework" type="462c0819:PsiDirectoryNode" />
+              <item name="Examination" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="sos" type="462c0819:PsiDirectoryNode" />
-              <item name="haruhi" type="462c0819:PsiDirectoryNode" />
+              <item name="nagato" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MyFramework" type="b2602c69:ProjectViewProjectNode" />
               <item name="MyFramework" type="462c0819:PsiDirectoryNode" />
-              <item name="TestFramework" type="462c0819:PsiDirectoryNode" />
+              <item name="Examination" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="sos" type="462c0819:PsiDirectoryNode" />
-              <item name="haruhi" type="462c0819:PsiDirectoryNode" />
-              <item name="aop" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MyFramework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MyFramework" type="462c0819:PsiDirectoryNode" />
-              <item name="TestFramework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sos" type="462c0819:PsiDirectoryNode" />
-              <item name="haruhi" type="462c0819:PsiDirectoryNode" />
-              <item name="ioc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MyFramework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MyFramework" type="462c0819:PsiDirectoryNode" />
-              <item name="TestFramework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sos" type="462c0819:PsiDirectoryNode" />
-              <item name="haruhi" type="462c0819:PsiDirectoryNode" />
-              <item name="ioc" type="462c0819:PsiDirectoryNode" />
-              <item name="beans" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MyFramework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MyFramework" type="462c0819:PsiDirectoryNode" />
-              <item name="TestFramework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sos" type="462c0819:PsiDirectoryNode" />
-              <item name="haruhi" type="462c0819:PsiDirectoryNode" />
-              <item name="ioc" type="462c0819:PsiDirectoryNode" />
-              <item name="factory" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MyFramework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MyFramework" type="462c0819:PsiDirectoryNode" />
-              <item name="TestFramework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sos" type="462c0819:PsiDirectoryNode" />
-              <item name="haruhi" type="462c0819:PsiDirectoryNode" />
-              <item name="ioc" type="462c0819:PsiDirectoryNode" />
-              <item name="prototype" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MyFramework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MyFramework" type="462c0819:PsiDirectoryNode" />
-              <item name="TestFramework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sos" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="yuki" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="AopBeanDefinition&#9;PSI&#9;JAVA://sos.haruhi.ioc.factory.XMLReaderFactory#beanDefinitionWhichHasAopBeanDefinition&#10;AopNamespaceHandler&#9;PSI&#9;JAVA://org.springframework.aop.config.AopNamespaceHandler&#10;AopN&#9;FILE&#9;jar://S:/apache-maven-3.5.2/responsity/org/springframework/spring-aop/4.3.11.RELEASE/spring-aop-4.3.11.RELEASE-sources.jar!/org/springframework/aop/config/AopNamespaceHandler.java&#10;DefaultBean&#9;PSI&#9;JAVA://org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader&#10;AopName&#9;PSI&#9;JAVA://org.springframework.aop.config.AopNamespaceHandler&#10;AspectJAutoPro&#9;PSI&#9;JAVA://org.springframework.aop.config.AspectJAutoProxyBeanDefinitionParser&#10;aspectj-autoproxy&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541937383225" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545143724444" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -498,20 +386,34 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.Test.testContainer">
+  <component name="RunManager" selected="Application.FileParseAndInstore">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileFactory" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="sos.isayama.FileFactory" />
+    <configuration name="FileParseAndInstore" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sos.yuki.FileParseAndInstore" />
       <module name="Examination" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="sos.isayama.*" />
+          <option name="PATTERN" value="sos.yuki.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MakeFakeFile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sos.yuki.MakeFakeFile" />
+      <module name="Examination" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sos.yuki.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -526,20 +428,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="aop.spring.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestHugeFile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="sos.isayama.TestHugeFile" />
-      <module name="Examination" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="sos.isayama.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -1042,18 +930,18 @@
     <list>
       <item itemvalue="Jetty Server.spring-test" />
       <item itemvalue="Application.TestAop" />
-      <item itemvalue="Application.FileFactory" />
-      <item itemvalue="Application.TestHugeFile" />
       <item itemvalue="JUnit.FastJsonTest.testToBean" />
       <item itemvalue="JUnit.Test.testContainer" />
+      <item itemvalue="Application.MakeFakeFile" />
+      <item itemvalue="Application.FileParseAndInstore" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.FileParseAndInstore" />
+        <item itemvalue="Application.MakeFakeFile" />
         <item itemvalue="JUnit.Test.testContainer" />
         <item itemvalue="Application.TestAop" />
         <item itemvalue="JUnit.FastJsonTest.testToBean" />
-        <item itemvalue="Application.TestHugeFile" />
-        <item itemvalue="Application.FileFactory" />
       </list>
     </recent_temporary>
   </component>
@@ -1098,6 +986,7 @@
       <workItem from="1541509019113" duration="1316000" />
       <workItem from="1541593798235" duration="3741000" />
       <workItem from="1541824475838" duration="10346000" />
+      <workItem from="1545136019129" duration="7823000" />
     </task>
     <task id="LOCAL-00001" summary="MySpring">
       <created>1539612398212</created>
@@ -1240,13 +1129,12 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="164381000" />
+    <option name="totallyTimeSpent" value="172204000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.25201073" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25159913" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1256,8 +1144,8 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32867134" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4969743" weight="0.32447553" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49865952" visible="true" weight="0.3972028" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4969743" weight="0.3243824" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49865952" weight="0.3972028" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -1267,7 +1155,7 @@
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5030257" side_tool="true" weight="0.3279483" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.49865952" weight="0.32307693" />
+      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.49865952" weight="0.32223415" />
       <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -1369,26 +1257,10 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/ioc/annotations/PointCut.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program/jdk1.8.0_151/src.zip!/java/io/InputStreamReader.java" />
-    <entry file="jar://D:/Program/jdk1.8.0_151/src.zip!/java/io/FileReader.java" />
     <entry file="file://$PROJECT_DIR$/Examination/src/main/java/sos/haruhi/DaoOperator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Examination/src/main/java/sos/nagato/FileFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="32" column="49" lean-forward="true" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
         </state>
       </provider>
     </entry>
@@ -1426,59 +1298,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://S:/apache-maven-3.5.2/responsity/org/springframework/spring-beans/4.3.11.RELEASE/spring-beans-4.3.11.RELEASE-sources.jar!/org/springframework/beans/factory/BeanFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="138" column="11" selection-start-line="138" selection-start-column="11" selection-end-line="138" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://S:/apache-maven-3.5.2/responsity/org/springframework/spring-aop/4.3.11.RELEASE/spring-aop-4.3.11.RELEASE-sources.jar!/org/springframework/aop/framework/CglibAopProxy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-369">
-          <caret line="642" selection-start-line="642" selection-end-line="642" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://S:/apache-maven-3.5.2/responsity/org/springframework/spring-context/4.3.11.RELEASE/spring-context-4.3.11.RELEASE-sources.jar!/org/springframework/context/support/AbstractRefreshableApplicationContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="172" selection-start-line="172" selection-end-line="172" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://S:/apache-maven-3.5.2/responsity/org/springframework/spring-context/4.3.11.RELEASE/spring-context-4.3.11.RELEASE-sources.jar!/org/springframework/context/support/AbstractApplicationContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="1077" selection-start-line="1077" selection-end-line="1077" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://S:/apache-maven-3.5.2/responsity/org/springframework/spring-beans/4.3.11.RELEASE/spring-beans-4.3.11.RELEASE-sources.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="486" selection-start-line="486" selection-end-line="486" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://S:/apache-maven-3.5.2/responsity/org/springframework/spring-beans/4.3.11.RELEASE/spring-beans-4.3.11.RELEASE-sources.jar!/org/springframework/beans/factory/support/AbstractBeanFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="305" selection-start-line="305" selection-end-line="305" />
-          <folding>
-            <element signature="e#12952#13495#0" expanded="true" />
-            <element signature="e#13494#13495#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://S:/apache-maven-3.5.2/responsity/org/springframework/spring-beans/4.3.11.RELEASE/spring-beans-4.3.11.RELEASE-sources.jar!/org/springframework/beans/factory/support/DefaultSingletonBeanRegistry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="227" column="17" lean-forward="true" selection-start-line="227" selection-start-column="17" selection-end-line="227" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://S:/apache-maven-3.5.2/responsity/org/springframework/spring-beans/4.3.11.RELEASE/spring-beans-4.3.11.RELEASE-sources.jar!/org/springframework/beans/factory/BeanFactory.java" />
+    <entry file="jar://S:/apache-maven-3.5.2/responsity/org/springframework/spring-aop/4.3.11.RELEASE/spring-aop-4.3.11.RELEASE-sources.jar!/org/springframework/aop/framework/CglibAopProxy.java" />
+    <entry file="jar://S:/apache-maven-3.5.2/responsity/org/springframework/spring-context/4.3.11.RELEASE/spring-context-4.3.11.RELEASE-sources.jar!/org/springframework/context/support/AbstractRefreshableApplicationContext.java" />
+    <entry file="jar://S:/apache-maven-3.5.2/responsity/org/springframework/spring-context/4.3.11.RELEASE/spring-context-4.3.11.RELEASE-sources.jar!/org/springframework/context/support/AbstractApplicationContext.java" />
+    <entry file="jar://S:/apache-maven-3.5.2/responsity/org/springframework/spring-beans/4.3.11.RELEASE/spring-beans-4.3.11.RELEASE-sources.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java" />
+    <entry file="jar://S:/apache-maven-3.5.2/responsity/org/springframework/spring-beans/4.3.11.RELEASE/spring-beans-4.3.11.RELEASE-sources.jar!/org/springframework/beans/factory/support/AbstractBeanFactory.java" />
+    <entry file="jar://S:/apache-maven-3.5.2/responsity/org/springframework/spring-beans/4.3.11.RELEASE/spring-beans-4.3.11.RELEASE-sources.jar!/org/springframework/beans/factory/support/DefaultSingletonBeanRegistry.java" />
     <entry file="file://$PROJECT_DIR$/Test/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
@@ -1514,13 +1340,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://S:/apache-maven-3.5.2/responsity/org/apache/commons/commons-lang3/3.8/commons-lang3-3.8.jar!/org/apache/commons/lang3/tuple/Pair.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://S:/apache-maven-3.5.2/responsity/org/apache/commons/commons-lang3/3.8/commons-lang3-3.8.jar!/org/apache/commons/lang3/tuple/Pair.class" />
     <entry file="file://$PROJECT_DIR$/TestFramework/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="413">
@@ -1528,13 +1348,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://S:/apache-maven-3.5.2/responsity/cglib/cglib/3.2.7/cglib-3.2.7.jar!/net/sf/cglib/proxy/MethodInterceptor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://S:/apache-maven-3.5.2/responsity/cglib/cglib/3.2.7/cglib-3.2.7.jar!/net/sf/cglib/proxy/MethodInterceptor.class" />
     <entry file="file://$PROJECT_DIR$/SpringFramework/src/test/java/aop/spring/TestBean.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
@@ -1549,13 +1363,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://S:/apache-maven-3.5.2/responsity/org/aspectj/aspectjweaver/1.9.1/aspectjweaver-1.9.1.jar!/org/aspectj/lang/annotation/Before.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://S:/apache-maven-3.5.2/responsity/org/aspectj/aspectjweaver/1.9.1/aspectjweaver-1.9.1.jar!/org/aspectj/lang/annotation/Before.class" />
     <entry file="file://$PROJECT_DIR$/SpringFramework/src/test/java/aop/spring/AspectJTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
@@ -1563,16 +1371,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/ioc/factory/MyMethodInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="19" column="45" lean-forward="true" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/ioc/factory/MyMethodInterceptor.java" />
     <entry file="file://$PROJECT_DIR$/TestFramework/src/main/java/sos/nagato/test/OrderInfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-63">
@@ -1629,13 +1428,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://S:/apache-maven-3.5.2/responsity/cglib/cglib/3.2.7/cglib-3.2.7.jar!/net/sf/cglib/proxy/CallbackFilter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://S:/apache-maven-3.5.2/responsity/cglib/cglib/3.2.7/cglib-3.2.7.jar!/net/sf/cglib/proxy/CallbackFilter.class" />
     <entry file="file://$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/ioc/beans/AopBeanDefinition.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -1658,13 +1451,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://S:/apache-maven-3.5.2/responsity/junit/junit/4.11/junit-4.11.jar!/org/junit/runners/ParentRunner.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="156" selection-start-line="156" selection-end-line="156" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://S:/apache-maven-3.5.2/responsity/junit/junit/4.11/junit-4.11.jar!/org/junit/runners/ParentRunner.class" />
     <entry file="file://$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/aop/MyMethodInterceptor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1675,13 +1462,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://S:/apache-maven-3.5.2/responsity/junit/junit/4.11/junit-4.11.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://S:/apache-maven-3.5.2/responsity/junit/junit/4.11/junit-4.11.jar!/org/junit/internal/runners/model/ReflectiveCallable.class" />
     <entry file="file://$PROJECT_DIR$/TestFramework/src/main/java/sos/nagato/test/XXX.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1711,31 +1492,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://S:/apache-maven-3.5.2/responsity/cglib/cglib/3.2.7/cglib-3.2.7.jar!/net/sf/cglib/proxy/Enhancer.class">
+    <entry file="jar://S:/apache-maven-3.5.2/responsity/cglib/cglib/3.2.7/cglib-3.2.7.jar!/net/sf/cglib/proxy/Enhancer.class" />
+    <entry file="jar://S:/apache-maven-3.5.2/responsity/cglib/cglib/3.2.7/cglib-3.2.7.jar!/net/sf/cglib/core/AbstractClassGenerator.class" />
+    <entry file="file://$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/ioc/factory/BeanFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="247" column="32" lean-forward="true" selection-start-line="247" selection-start-column="32" selection-end-line="247" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://S:/apache-maven-3.5.2/responsity/cglib/cglib/3.2.7/cglib-3.2.7.jar!/net/sf/cglib/core/AbstractClassGenerator.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="136" column="21" selection-start-line="136" selection-start-column="21" selection-end-line="136" selection-end-column="21" />
+        <state relative-caret-position="190">
+          <caret line="175" column="68" selection-start-line="175" selection-start-column="68" selection-end-line="175" selection-end-column="68" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TestFramework/src/main/java/sos/nagato/test/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
+        <state relative-caret-position="330">
           <caret line="20" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TestFramework/src/main/java/sos/haruhi/ioc/factory/BeanFactory.java">
+    <entry file="file://$PROJECT_DIR$/Examination/src/main/java/sos/yuki/MakeFakeFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="175" column="68" lean-forward="true" selection-start-line="175" selection-start-column="68" selection-end-line="175" selection-end-column="68" />
+        <state relative-caret-position="440">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Examination/src/main/java/sos/nagato/FileFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="117" column="17" lean-forward="true" selection-start-line="117" selection-start-column="17" selection-end-line="117" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://G:/tools/src.zip!/java/util/concurrent/BlockingQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="275" column="6" selection-start-line="275" selection-start-column="6" selection-end-line="275" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Examination/src/main/java/sos/yuki/FileParseAndInstore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="34" column="39" lean-forward="true" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#453#461#0" expanded="true" />
+            <element signature="e#1049#1055#0" expanded="true" />
+            <element signature="e#1788#1892#0" expanded="true" />
+            <element signature="e#1891#1892#0" expanded="true" />
+            <element signature="e#1653#1779#0" expanded="true" />
+            <element signature="e#1778#1779#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
