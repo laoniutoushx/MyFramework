@@ -16,29 +16,29 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class FileParseAndInstore {
 
-    private ExecutorService service = Executors.newFixedThreadPool(23);
+    private ExecutorService service = Executors.newFixedThreadPool(13);
     private AtomicInteger unHandleFilesAndInstores = new AtomicInteger(0);
-    private BlockingQueue<String> queue = new ArrayBlockingQueue<String>(10000000);
+    private BlockingQueue<String> queue = new ArrayBlockingQueue<String>(5000000);
 
     public FileParseAndInstore() throws ClassNotFoundException, SQLException {
-        Class.forName("com.mysql.jdbc.Driver");
+        Class.forName("oracle.jdbc.driver.OracleDriver");
     }
 
     private void start(String path) throws InterruptedException {
         File file = new File(path);
         getSubDirsFile(file);
-        List<Pojo> pojos = new ArrayList<Pojo>(50000);
+        List<Pojo> pojos = new ArrayList<Pojo>(200000);
         while(queue.size() != 0 || unHandleFilesAndInstores.get() > 0){
             String line = queue.poll();
             if(line == null) continue;
             pojos.add(parseLines(line));
-            if(pojos.size() == 49995) {
+            if(pojos.size() == 100000) {
                 System.out.println(queue.size());
                 particalInstore(pojos);
-                pojos = new ArrayList<Pojo>(50000);
+                pojos = new ArrayList<Pojo>(200000);
             }
         }
-        instore(pojos);
+//        instore(pojos);
         service.shutdown();
     }
 
@@ -55,7 +55,7 @@ public class FileParseAndInstore {
     private Pojo parseLines(String lines) {
         String[] split_line = lines.split("\\|");
         Pojo pojo = new Pojo();
-        pojo.id = Integer.valueOf(split_line[0]);
+        pojo.id = split_line[0];
         pojo.name = split_line[1];
         pojo.age = Integer.valueOf(split_line[2]);
         pojo.desc = split_line[3];
@@ -95,7 +95,7 @@ public class FileParseAndInstore {
 //        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/test?serverTimezone=UTC&useServerPrepStmts=false&rewriteBatchedStatements=true", "root", "2012");
         Connection connection = null;
         try {
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/test?serverTimezone=UTC", "root", "2012");
+            connection = DriverManager.getConnection("jdbc:oracle:thin:@10.10.20.218:1521:orcl", "gsjy", "gsjy");
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -104,7 +104,7 @@ public class FileParseAndInstore {
             connection.setAutoCommit(false);
             ps = connection.prepareStatement("INSERT INTO EXAM(ID, NAME, AGE, ADDRESS) VALUES(?, ?, ?, ?)");
             for(Pojo pojo:pojos){
-                ps.setInt(1, pojo.id);
+                ps.setString(1, pojo.id);
                 ps.setString(2, pojo.name);
                 ps.setInt(3, pojo.age);
                 ps.setString(4, pojo.desc);
@@ -140,7 +140,7 @@ public class FileParseAndInstore {
     }
 
     private class Pojo {
-        int id;
+        String id;
         String name;
         int age;
         String desc;

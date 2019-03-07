@@ -23,7 +23,7 @@ public class MakeFakeFile {
 
         file = new File("S:/filehandle/nagato.txt");
         writer = new BufferedWriter(new FileWriter(file));
-        for(int i = 333334; i < 666666; i++){
+        for(int i = 333333; i < 666666; i++){
             String id = String.valueOf(i);
             String name = "nagato" + i;
             String age = "13";
@@ -37,7 +37,7 @@ public class MakeFakeFile {
 
         file = new File("S:/filehandle/yuki.txt");
         writer = new BufferedWriter(new FileWriter(file));
-        for(int i = 666667; i < 999999; i++){
+        for(int i = 666666; i < 999999; i++){
             String id = String.valueOf(i);
             String name = "yuki" + i;
             String age = "17";
